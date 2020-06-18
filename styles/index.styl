@@ -14,3 +14,48 @@ body
   background: weiWhite;
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
+
+header
+  display: flex;
+  align-items: center;
+  padding: 0 200px 0 400px;
+  height: 40px;
+  background: tc1;
+
+  & > *:nth-child(2)
+    margin-left: auto;
+
+  & > *:nth-child(n + 3)
+    margin-left: 20px;
+
+main
+  display: flex;
+  padding: 0 0 0 400px;
+  min-height: calc(100% - 40px);
+
+nav
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 0;
+  min-width: 200px;
+  max-width: 200px;
+  background: tc2;
+
+.page-content
+  padding: 20px 0 20px 0;
+  min-width: calc(100% - 500px);
+  max-width: calc(100% - 500px);
+  background: tc3;
+
+.page-notif
+  padding: 20px 0 20px 20px;
+  min-width: 300px;
+  max-width: 300px;
+  background: tc4;
+
+footer
+  display: flex;
+  justify-content: center;
+  padding: 40px 200px 40px 200px;
+  background: tc1;
+  text-align: center;
