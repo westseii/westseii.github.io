@@ -19,7 +19,7 @@ header {
   align-items: center;
   padding: 0 200px 0 400px;
   height: 40px;
-  background: #ffc0cb;
+  background: #fc0;
 }
 header > *:nth-child(2) {
   margin-left: auto;
@@ -38,24 +38,34 @@ nav {
   padding: 20px 20px 20px 0;
   min-width: 200px;
   max-width: 200px;
-  background: #90ee90;
 }
 .page-content {
   padding: 20px 0 20px 0;
   min-width: calc(100% - 500px);
   max-width: calc(100% - 500px);
-  background: #add8e6;
 }
 .page-notif {
   padding: 20px 0 20px 20px;
   min-width: 300px;
   max-width: 300px;
-  background: #ffffe0;
 }
 footer {
   display: flex;
   justify-content: center;
   padding: 40px 200px 40px 200px;
-  background: #ffc0cb;
+  border-top: solid 4px #e6e6e6;
   text-align: center;
+}
+span.header-vdiv::before {
+  color: #e6e6e6;
+  content: "|";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 1.8rem;
 }

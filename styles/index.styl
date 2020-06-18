@@ -20,7 +20,7 @@ header
   align-items: center;
   padding: 0 200px 0 400px;
   height: 40px;
-  background: tc1;
+  background: hawkeyeGold;
 
   & > *:nth-child(2)
     margin-left: auto;
@@ -39,23 +39,26 @@ nav
   padding: 20px 20px 20px 0;
   min-width: 200px;
   max-width: 200px;
-  background: tc2;
 
 .page-content
   padding: 20px 0 20px 0;
   min-width: calc(100% - 500px);
   max-width: calc(100% - 500px);
-  background: tc3;
 
 .page-notif
   padding: 20px 0 20px 20px;
   min-width: 300px;
   max-width: 300px;
-  background: tc4;
 
 footer
   display: flex;
   justify-content: center;
   padding: 40px 200px 40px 200px;
-  background: tc1;
+  border-top: solid 4px weiAccent;
   text-align: center;
+
+span.header-vdiv::before
+  color: weiAccent;
+  content: "|";
+
+tHeadings();
