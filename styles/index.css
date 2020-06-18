@@ -57,9 +57,32 @@ footer {
   border-top: solid 4px #e6e6e6;
   text-align: center;
 }
+hr.projhr,
 span.header-vdiv::before {
   color: #e6e6e6;
   content: "|";
+}
+.dev {
+  position: fixed;
+  top: 64px;
+  left: 20px;
+  z-index: 1;
+  padding: 10px;
+  width: 360px;
+  border: solid 4px #e6e6e6;
+  border-radius: 20px;
+  background: #f2f2f2;
+}
+.dev-tool-item {
+  display: flex;
+  padding: 4px;
+  line-height: 0;
+}
+.dev-tool-item:nth-child(2n + 1) {
+  background: #e6e6e6;
+}
+.dev-tool-item > *:last-child {
+  margin-left: auto;
 }
 h1,
 h2,
@@ -69,4 +92,16 @@ h5,
 h6 {
   font-weight: normal;
   font-size: 1.8rem;
+}
+.bg-tc1 {
+  background: #ffc0cb;
+}
+.bg-tc2 {
+  background: #90ee90;
+}
+.bg-tc3 {
+  background: #add8e6;
+}
+.bg-tc4 {
+  background: #ffffe0;
 }

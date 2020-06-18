@@ -1,4 +1,3 @@
-
 @import "./styl/*";
 
 html
@@ -58,8 +57,31 @@ footer
   border-top: solid 4px weiAccent;
   text-align: center;
 
-span.header-vdiv::before
+hr.projhr, span.header-vdiv::before
   color: weiAccent;
   content: "|";
 
+.dev
+  position: fixed;
+  top: 64px;
+  left: 20px;
+  z-index: 1;
+  padding: 10px;
+  width: 360px;
+  border: solid 4px weiAccent;
+  border-radius: 20px;
+  background: weiWhite;
+
+.dev-tool-item
+  display: flex;
+  padding: 4px;
+  line-height: 0;
+
+  &:nth-child(2n + 1)
+    background: weiAccent;
+
+  & > *:last-child
+    margin-left: auto;
+
 tHeadings();
+tTestColors();
