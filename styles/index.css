@@ -59,7 +59,6 @@ footer {
   border-top: solid 4px #e6e6e6;
   text-align: center;
 }
-hr.projhr,
 span.header-vdiv::before {
   color: #e6e6e6;
   content: "|";
