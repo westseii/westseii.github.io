@@ -15,11 +15,14 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 header {
+  position: fixed;
   display: flex;
   align-items: center;
   padding: 0 200px 0 400px;
+  width: 100%;
   height: 40px;
   background: #fc0;
+  box-shadow: 0 4px 12px rgba(85,85,85,0.2);
 }
 header > *:nth-child(2) {
   margin-left: auto;
@@ -29,9 +32,8 @@ header > *:nth-child(n + 3) {
 }
 main {
   display: flex;
-  padding: 0 0 0 400px;
-  min-height: calc(100% - 40px);
-  border-top: solid 4px #e6e6e6;
+  padding: 40px 0 0 400px;
+  min-height: 100%;
 }
 nav {
   display: flex;
@@ -62,28 +64,6 @@ span.header-vdiv::before {
   color: #e6e6e6;
   content: "|";
 }
-.dev {
-  position: fixed;
-  top: 64px;
-  left: 20px;
-  z-index: 1;
-  padding: 10px;
-  width: 360px;
-  border: solid 4px #e6e6e6;
-  border-radius: 20px;
-  background: #f2f2f2;
-}
-.dev-tool-item {
-  display: flex;
-  padding: 4px;
-  line-height: 0;
-}
-.dev-tool-item:nth-child(2n + 1) {
-  background: #e6e6e6;
-}
-.dev-tool-item > *:last-child {
-  margin-left: auto;
-}
 h1,
 h2,
 h3,
@@ -104,4 +84,26 @@ h6 {
 }
 .bg-tc4 {
   background: #ffffe0;
+}
+.dev {
+  position: fixed;
+  top: 64px;
+  left: 20px;
+  z-index: 1;
+  padding: 10px;
+  width: 360px;
+  border: solid 4px #e6e6e6;
+  border-radius: 20px;
+  background: #f2f2f2;
+}
+.dev-dti {
+  display: flex;
+  padding: 4px;
+  line-height: 0;
+}
+.dev-dti:nth-child(2n + 1) {
+  background: #e6e6e6;
+}
+.dev-dti > *:last-child {
+  margin-left: auto;
 }

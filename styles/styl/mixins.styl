@@ -6,7 +6,7 @@ tHeadings()
     font-weight: normal;
     font-size: 1.8rem;
 
-tTestColors()
+caTestColors()
   .bg-tc1
     background: tc1;
 
@@ -18,3 +18,26 @@ tTestColors()
 
   .bg-tc4
     background: tc4;
+
+caDev()
+  .dev
+    position: fixed;
+    top: 64px;
+    left: 20px;
+    z-index: 1;
+    padding: 10px;
+    width: 360px;
+    border: solid 4px weiAccent;
+    border-radius: 20px;
+    background: weiWhite;
+
+  .dev-dti
+    display: flex;
+    padding: 4px;
+    line-height: 0;
+
+    &:nth-child(2n + 1)
+      background: weiAccent;
+
+    & > *:last-child
+      margin-left: auto;

@@ -13,7 +13,7 @@ const legalContent = document.querySelector(".legal");
 
 //
 // sel other
-const btnToyboxToggleTestColors = document.querySelector(".dti-toggle-tc");
+const btnToyboxToggleTestColors = document.querySelector(".dti-btn-tc");
 
 //
 // code
