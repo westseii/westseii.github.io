@@ -59,8 +59,8 @@ footer
   border-top: solid 4px weiAccent;
   text-align: center;
 
-hr.page-hr
-  margin: 2px 0;
+hr.basic
+  margin: 0;
   height: 2px;
   border: none;
   background: weiAccent;
@@ -69,21 +69,6 @@ span.header-vdiv::before
   color: weiAccent;
   content: "|";
 
-button.toy-btn
-  position: relative;
-  padding: 0 20px;
-  border: none;
-  border-radius: 4px;
-  background: weiAccent2;
-
-  &:active
-    top: 1px;
-    color: weiWhite;
-
-  &:disabled
-    top: 0;
-    color: weiWhite;
-
-tHeadings();
+tHeadings(normal, 1.8rem);
 caTestColors();
 caToys();
