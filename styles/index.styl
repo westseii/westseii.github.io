@@ -4,6 +4,7 @@ html
   box-sizing: border-box;
   height: 100%;
   font-size: 10px;
+  line-height: 1.4;
 
 *, *::before, *::after
   box-sizing: inherit;
@@ -22,7 +23,7 @@ header
   width: 100%;
   height: 40px;
   background: hawkeyeGold;
-  mBoxShadow();
+  mBoxShadow(2px, 0.1);
 
   & > *:nth-child(2)
     margin-left: auto;
@@ -56,10 +57,10 @@ footer
   display: flex;
   justify-content: center;
   padding: 40px 200px 40px 200px;
-  border-top: solid 4px weiAccent;
+  border-top: solid 2px weiAccent;
   text-align: center;
 
-hr.basic
+hr.hr-basic
   margin: 0;
   height: 2px;
   border: none;
@@ -72,3 +73,15 @@ span.header-vdiv::before
 tHeadings(normal, 1.8rem);
 caTestColors();
 caToys();
+
+// temp css
+.toys-togglevis
+  position: fixed !important;
+  top: 4px;
+  left: 20px;
+  z-index: 1;
+  height: 32px;
+  background: weiWhite !important;
+
+  &:active
+    top: 5px !important;

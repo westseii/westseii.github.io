@@ -55,3 +55,11 @@ function _toggleColors() {
 }
 
 btnToysToggleColors.addEventListener("click", toggleColors);
+
+//
+// temp code
+const toys = document.querySelector(".toys");
+const btnToysToggleVis = document.querySelector(".toys-togglevis");
+btnToysToggleVis.addEventListener("click", () =>
+  toys.classList.toggle("toys--display-none")
+);
