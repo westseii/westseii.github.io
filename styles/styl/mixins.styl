@@ -1,11 +1,14 @@
-mBoxShadow(px = 2px, a = 0.1)
+// m - mixin
+mBoxShadow(px = 4px, a = 0.2)
   box-shadow: 0 px px * 3 rgba(85, 85, 85, a);
 
+// t - tag
 tHeadings()
   h1, h2, h3, h4, h5, h6
     font-weight: normal;
     font-size: 1.8rem;
 
+// ca - class attribute
 caTestColors()
   .bg-tc1
     background: tc1;
@@ -19,24 +22,27 @@ caTestColors()
   .bg-tc4
     background: tc4;
 
-caDev()
-  .dev
+caToys()
+  .toys
     position: fixed;
-    top: 64px;
+    top: 60px;
     left: 20px;
-    z-index: 1;
     padding: 10px;
     width: 360px;
-    border: solid 4px weiAccent;
-    border-radius: 20px;
+    border-radius: 4px;
     background: weiWhite;
+    mBoxShadow();
 
-  .dev-dti
+  .toy-ti
     display: flex;
-    padding: 4px;
+    padding: 4px 4px 4px 10px;
     line-height: 0;
 
-    &:nth-child(2n + 1)
+    &:nth-child(n+2)
+      color: red;
+
+    &:nth-child(2n)
+      border-radius: 4px;
       background: weiAccent;
 
     & > *:last-child

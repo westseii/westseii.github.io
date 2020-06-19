@@ -1,11 +1,11 @@
 const project = {
-  name: "Project",
+  name: "Name",
   userName: "User",
-  version: "a.1.0",
+  version: "a.1.1",
 };
 
 const legalHTML = `
-<p>&copy; 2020 ${project.name}</p>
+<p>&copy; 2020 ${project.name}, scoot.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sed quisquam perferendis repellat atque, quam accusantium!</p>
 <p>${project.version}</p>
 `;
