@@ -59,10 +59,14 @@ caToys()
     border-radius: 4px;
     background: weiAccent2;
 
+  button.toy-btn-active
+    &:hover
+      cursor: pointer;
+
     &:active
       top: 1px;
       color: weiWhite;
 
-    &:disabled
-      top: 0;
-      color: weiWhite;
+  button.toy-btn-inactive
+    &:hover
+      cursor: not-allowed;

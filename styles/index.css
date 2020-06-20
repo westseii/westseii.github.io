@@ -127,13 +127,15 @@ button.toy-btn {
   border-radius: 4px;
   background: #d9d9d9;
 }
-button.toy-btn:active {
+button.toy-btn-active:hover {
+  cursor: pointer;
+}
+button.toy-btn-active:active {
   top: 1px;
   color: #f2f2f2;
 }
-button.toy-btn:disabled {
-  top: 0;
-  color: #f2f2f2;
+button.toy-btn-inactive:hover {
+  cursor: not-allowed;
 }
 .toys-togglevis {
   position: fixed !important;
