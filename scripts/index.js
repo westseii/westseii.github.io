@@ -1,6 +1,5 @@
 import { project, legalHTML } from "./westseii.temp.js";
 
-//
 // sel
 const header = document.querySelector("header");
 const nav = document.querySelector("nav");
@@ -12,10 +11,10 @@ const pageTitle = document.querySelector(".page-title");
 const userGreet = document.querySelector(".user-greet");
 const legalContent = document.querySelector(".legal");
 
-//
-const btnToysToggleColors = document.querySelector(".ti-btn-colors");
+const toybox = document.querySelector(".toybox");
+const btnToggToybox = document.querySelector(".btn-togg-toybox");
+const btnBgColor = document.getElementById("btn-bg-color");
 
-//
 // code
 document.title = project.name;
 
@@ -24,24 +23,29 @@ userGreet.innerHTML = `Hello, ${project.userName}`;
 legalContent.innerHTML = legalHTML;
 
 //
-// toys - toggle colors
-let colorsEnabled = false;
+// toybox - show/hide
+btnToggToybox.addEventListener("click", () =>
+  toybox.classList.toggle("toybox--display-none")
+);
 
-function toggleColors() {
-  colorsEnabled ? disableColors() : enableColors();
+// toybox - toggle contrast
+let contrastEnabled = false;
+
+function toggleContrast() {
+  contrastEnabled ? disableContrast() : enableContrast();
 }
 
-function enableColors() {
-  colorsEnabled = true;
-  _toggleColors();
+function enableContrast() {
+  contrastEnabled = true;
+  _toggleContrast();
 }
 
-function disableColors() {
-  colorsEnabled = false;
-  _toggleColors();
+function disableContrast() {
+  contrastEnabled = false;
+  _toggleContrast();
 }
 
-const toggleColorsArr = [
+const toggleContrastArr = [
   { element: header, attribute: "bg-tc1" },
   { element: nav, attribute: "bg-tc2" },
   { element: pageContent, attribute: "bg-tc3" },
@@ -49,17 +53,9 @@ const toggleColorsArr = [
   { element: footer, attribute: "bg-tc1" },
 ];
 
-function _toggleColors() {
-  for (const obj of toggleColorsArr)
+function _toggleContrast() {
+  for (const obj of toggleContrastArr)
     obj.element.classList.toggle(obj.attribute);
 }
 
-btnToysToggleColors.addEventListener("click", toggleColors);
-
-//
-// temp code
-const toys = document.querySelector(".toys");
-const btnToysToggleVis = document.querySelector(".toys-togglevis");
-btnToysToggleVis.addEventListener("click", () =>
-  toys.classList.toggle("toys--display-none")
-);
+btnBgColor.addEventListener("click", toggleContrast);

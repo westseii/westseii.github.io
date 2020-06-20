@@ -60,28 +60,49 @@ footer
   border-top: solid 2px weiAccent;
   text-align: center;
 
+button.btn-basic
+  position: relative;
+  padding: 0 20px;
+  border: none;
+  border-radius: 4px;
+  background: weiAccent2;
+
+button.btn-basic--active
+  &:hover
+    cursor: pointer;
+
+  &:active
+    top: 1px;
+    color: weiWhite;
+
+button.btn-basic--disabled
+  color: weiWhite;
+
+  &:hover
+    cursor: not-allowed;
+
+button.btn-togg-toybox
+  position: fixed;
+  top: 6px;
+  left: 20px;
+  z-index: 1;
+  height: 28px;
+  background: weiWhite;
+
+  &:active
+    top: 7px;
+    color: hawkeyeGold;
+
 hr.hr-basic
   margin: 0;
   height: 2px;
   border: none;
   background: weiAccent;
 
-span.header-vdiv::before
-  color: weiAccent;
+span.v-div::before
+  color: weiWhite;
   content: "|";
 
 tHeadings(normal, 1.8rem);
 caTestColors();
-caToys();
-
-// temp css
-.toys-togglevis
-  position: fixed !important;
-  top: 4px;
-  left: 20px;
-  z-index: 1;
-  height: 32px;
-  background: weiWhite !important;
-
-  &:active
-    top: 5px !important;
+caToybox();
