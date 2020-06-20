@@ -46,6 +46,7 @@ function disableContrast() {
 }
 
 const toggleContrastArr = [
+  { element: document.body, attribute: "bg-tc5" },
   { element: header, attribute: "bg-tc1" },
   { element: nav, attribute: "bg-tc2" },
   { element: pageContent, attribute: "bg-tc3" },

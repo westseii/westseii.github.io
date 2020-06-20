@@ -123,6 +123,9 @@ h6 {
 .bg-tc4 {
   background: #ffffe0;
 }
+.bg-tc5 {
+  background: #333;
+}
 .toybox {
   position: fixed;
   top: 60px;
