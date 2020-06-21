@@ -1,5 +1,5 @@
 const project = {
-  name: "Name",
+  name: "Playground",
   userName: "User",
   version: "a.1.1",
 };

@@ -4,7 +4,7 @@ html
   box-sizing: border-box;
   height: 100%;
   font-size: 10px;
-  line-height: 1.4;
+  line-height: 1.8;
 
 *, *::before, *::after
   box-sizing: inherit;
@@ -67,6 +67,9 @@ button.btn-basic
   border-radius: 4px;
   background: weiAccent2;
 
+  &:focus
+    background: #00b3b3;
+
 button.btn-basic--active
   &:hover
     cursor: pointer;
@@ -106,3 +109,16 @@ span.v-div::before
 tHeadings(normal, 1.8rem);
 caTestColors();
 caToybox();
+
+//
+// wip
+.testbox
+  overflow: hidden;
+  padding: 0 20px;
+  border-top: solid 4px hawkeyeGold;
+  border-radius: 8px;
+  mBoxShadow(2px, 0.1);
+
+  .sig:before
+    color: hawkeyeGold;
+    content: " ~ ";
