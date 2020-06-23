@@ -13,49 +13,44 @@
   </head>
 
   <body>
-    <button class="btn-basic btn-basic--active btn-togg-toybox">Toybox</button>
+    <button id="btn-toggle-toybox" class="btn-basic btn-basic__active">
+      toybox
+    </button>
 
-    <div class="toybox toybox--display-none">
-      <h2>Toybox</h2>
+    <div id="toybox" class="toybox__display-none">
+      <h2>toybox</h2>
       <hr class="hr-basic" />
       <div>
-        <div class="toy">
-          <p>bg color contrast</p>
-          <button id="btn-bg-color" class="btn-basic btn-basic--active">
+        <div class="toy-item">
+          <p>background color contrast</p>
+          <button id="btn-toggle-bgcolors" class="btn-basic btn-basic__active">
             on <span class="v-div"></span> off
           </button>
         </div>
-        <div class="toy">
+        <div class="toy-item">
           <p>toy2</p>
-          <button class="btn-basic btn-basic--disabled">disabled</button>
+          <button class="btn-basic btn-basic__disabled" disabled="disabled">
+            disabled
+          </button>
         </div>
       </div>
     </div>
 
-    <header>
-      <h1 class="page-title"></h1>
-      <p>ph</p>
-      <span class="v-div"></span>
-      <p class="user-greet"></p>
+    <header class="header">
+      <h1 class="header--title"></h1>
+      <p class="header--greet-user"></p>
     </header>
 
-    <main>
-      <nav></nav>
+    <main class="main">
+      <nav class="main--nav"></nav>
 
-      <section class="page-content">
-        <div class="testbox">
-          <h2>Hi</h2>
-          <hr class="hr-basic" />
-          <p>Random page for me to do whatever I like.</p>
-          <small><p class="sig">韦斯克</p></small>
-        </div>
-      </section>
+      <section class="main--content"></section>
 
-      <section class="page-notif"></section>
+      <section class="main--notify"></section>
     </main>
 
-    <footer>
-      <div class="legal"></div>
+    <footer class="footer">
+      <div class="footer--legal"></div>
     </footer>
 
     <script type="module" src="./scripts/index.js"></script>

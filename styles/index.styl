@@ -1,4 +1,6 @@
-@import "./styl/*";
+@require "./styl/vars.styl";
+@require "./styl/general.styl";
+@require "./styl/toybox.styl";
 
 html
   box-sizing: border-box;
@@ -15,7 +17,9 @@ body
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
 
-header
+type--headings(normal, 1.8rem);
+
+.header
   position: fixed;
   display: flex;
   align-items: center;
@@ -23,7 +27,7 @@ header
   width: 100%;
   height: 40px;
   background: hawkeyeGold;
-  mBoxShadow(2px, 0.1);
+  mixin--box-shadow(2px, 0.1);
 
   & > *:nth-child(2)
     margin-left: auto;
@@ -31,46 +35,64 @@ header
   & > *:nth-child(n+3)
     margin-left: 20px;
 
-main
+.main
   display: flex;
   padding: 40px 0 0 400px;
   min-height: 100%;
 
-nav
+.main--nav
   display: flex;
   flex-direction: column;
   padding: 20px 20px 20px 0;
   min-width: 200px;
   max-width: 200px;
 
-.page-content
+.main--content
   padding: 20px 0 20px 0;
   min-width: calc(100% - 500px);
   max-width: calc(100% - 500px);
 
-.page-notif
+.main--notify
   padding: 20px 0 20px 20px;
   min-width: 300px;
   max-width: 300px;
 
-footer
+.footer
   display: flex;
   justify-content: center;
   padding: 40px 200px 40px 200px;
   border-top: solid 2px weiAccent;
   text-align: center;
 
-button.btn-basic
+#btn-toggle-toybox
+  position: fixed;
+  top: 6px;
+  left: 20px;
+  z-index: 1;
+  background: weiWhite;
+
+  &:active
+    top: 7px;
+    color: hawkeyeGold;
+
+class--test-colors();
+
+.btn-basic
   position: relative;
-  padding: 0 20px;
+  padding: 14px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 100px;
   background: weiAccent2;
+  line-height: 0;
 
   &:focus
-    background: #00b3b3;
+    background: #00b3b3 !important;
+    color: weiWhite;
 
-button.btn-basic--active
+  &[disabled=disabled]
+    cursor: not-allowed;
+
+.btn-basic__active
   &:hover
     cursor: pointer;
 
@@ -78,47 +100,14 @@ button.btn-basic--active
     top: 1px;
     color: weiWhite;
 
-button.btn-basic--disabled
-  color: weiWhite;
-
-  &:hover
-    cursor: not-allowed;
-
-button.btn-togg-toybox
-  position: fixed;
-  top: 6px;
-  left: 20px;
-  z-index: 1;
-  height: 28px;
-  background: weiWhite;
-
-  &:active
-    top: 7px;
-    color: hawkeyeGold;
-
-hr.hr-basic
+.hr-basic
   margin: 0;
   height: 2px;
   border: none;
   background: weiAccent;
 
-span.v-div::before
+.v-div::before
   color: weiWhite;
   content: "|";
 
-tHeadings(normal, 1.8rem);
-caTestColors();
-caToybox();
-
-//
-// wip
-.testbox
-  overflow: hidden;
-  padding: 0 20px;
-  border-top: solid 4px hawkeyeGold;
-  border-radius: 8px;
-  mBoxShadow(2px, 0.1);
-
-  .sig:before
-    color: hawkeyeGold;
-    content: " ~ ";
+class--toybox();

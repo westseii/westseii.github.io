@@ -10,4 +10,5 @@ const legalHTML = `
 <p>${project.version}</p>
 `;
 
-export { project, legalHTML };
+export default project;
+export { legalHTML };

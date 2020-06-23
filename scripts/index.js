@@ -1,33 +1,34 @@
-import { project, legalHTML } from "./westseii.temp.js";
+import project, { legalHTML } from "./westseii.temp.js";
 
-// sel
-const header = document.querySelector("header");
-const nav = document.querySelector("nav");
-const pageContent = document.querySelector(".page-content");
-const pageNotif = document.querySelector(".page-notif");
-const footer = document.querySelector("footer");
-
-const pageTitle = document.querySelector(".page-title");
-const userGreet = document.querySelector(".user-greet");
-const legalContent = document.querySelector(".legal");
-
-const toybox = document.querySelector(".toybox");
-const btnToggToybox = document.querySelector(".btn-togg-toybox");
-const btnBgColor = document.getElementById("btn-bg-color");
-
-// code
 document.title = project.name;
 
-pageTitle.innerHTML = project.name;
-userGreet.innerHTML = `Hello, ${project.userName}`;
-legalContent.innerHTML = legalHTML;
+//
+//
+const header = document.querySelector(".header");
+const footer = document.querySelector(".footer");
+
+const headerTitle = document.querySelector(".header--title");
+const headerGreetUser = document.querySelector(".header--greet-user");
+const mainNav = document.querySelector(".main--nav");
+const mainContent = document.querySelector(".main--content");
+const mainNotify = document.querySelector(".main--notify");
+const footerLegal = document.querySelector(".footer--legal");
+
+const toybox = document.getElementById("toybox");
+const btnToggleToybox = document.getElementById("btn-toggle-toybox");
+const btnToggleBgcolors = document.getElementById("btn-toggle-bgcolors");
+
+headerTitle.innerHTML = project.name;
+headerGreetUser.innerHTML = `Hello, ${project.userName}`;
+footerLegal.innerHTML = legalHTML;
 
 //
-// toybox - show/hide
-btnToggToybox.addEventListener("click", () =>
-  toybox.classList.toggle("toybox--display-none")
+// toybox - toggle vis
+btnToggleToybox.addEventListener("click", () =>
+  toybox.classList.toggle("toybox__display-none")
 );
 
+//
 // toybox - toggle contrast
 let contrastEnabled = false;
 
@@ -46,17 +47,16 @@ function disableContrast() {
 }
 
 const toggleContrastArr = [
-  { element: document.body, attribute: "bg-tc5" },
-  { element: header, attribute: "bg-tc1" },
-  { element: nav, attribute: "bg-tc2" },
-  { element: pageContent, attribute: "bg-tc3" },
-  { element: pageNotif, attribute: "bg-tc4" },
-  { element: footer, attribute: "bg-tc1" },
+  { element: document.body, class: "bg-tc5" },
+  { element: header, class: "bg-tc1" },
+  { element: mainNav, class: "bg-tc2" },
+  { element: mainContent, class: "bg-tc3" },
+  { element: mainNotify, class: "bg-tc4" },
+  { element: footer, class: "bg-tc1" },
 ];
 
 function _toggleContrast() {
-  for (const obj of toggleContrastArr)
-    obj.element.classList.toggle(obj.attribute);
+  for (const obj of toggleContrastArr) obj.element.classList.toggle(obj.class);
 }
 
-btnBgColor.addEventListener("click", toggleContrast);
+btnToggleBgcolors.addEventListener("click", toggleContrast);
