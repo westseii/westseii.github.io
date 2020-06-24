@@ -1,0 +1,27 @@
+class--test-notif()
+  .test-notif
+    padding: 16px;
+    background: weiAccent;
+    color: weiDark;
+    font-size: 1.2rem;
+    transition: 0.1s;
+
+    &:hover
+      background: weiAccent2;
+
+    &:first-child
+      border-top-left-radius: 20px;
+
+    &:nth-child(n+2)
+      border-top: solid 2px weiAccent2;
+
+    &:last-child
+      border-bottom-left-radius: 20px;
+
+  .test-notif--top
+    display: flex;
+    margin-bottom: 8px;
+    font-weight: bold;
+
+    & > span:last-child
+      margin-left: auto;
