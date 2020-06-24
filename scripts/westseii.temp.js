@@ -1,7 +1,16 @@
+const date = new Date();
+const dateOptions = {
+  weekday: "short",
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+};
+
 const project = {
   name: "Playground",
-  userName: "User",
   version: "a.1.1",
+  userName: "User",
+  date: date.toLocaleDateString("en-US", dateOptions),
 };
 
 const legalHTML = `

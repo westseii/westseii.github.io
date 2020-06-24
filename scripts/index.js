@@ -1,4 +1,5 @@
 import project, { legalHTML } from "./westseii.temp.js";
+import newTestCard, { _testCardArr } from "./modules/test.card.js";
 
 document.title = project.name;
 
@@ -59,7 +60,11 @@ function toggleToybox() {
   toybox.classList.toggle("display-none");
 }
 
-/* event listeners */
+/* events - buttons */
 btnToggleBgColors.addEventListener("click", toggleContrast);
 btnShowToybox.addEventListener("click", toggleToybox);
 btnHideToybox.addEventListener("click", toggleToybox);
+
+//
+// TEST
+newTestCard(mainContent, "Test");
