@@ -2,10 +2,11 @@ import project, { legalHTML } from "./westseii.temp.js";
 
 document.title = project.name;
 
-//
-//
+/* selectors */
 const header = document.querySelector(".header");
 const footer = document.querySelector(".footer");
+
+const toybox = document.querySelector(".toybox");
 
 const headerTitle = document.querySelector(".header--title");
 const headerGreetUser = document.querySelector(".header--greet-user");
@@ -14,35 +15,28 @@ const mainContent = document.querySelector(".main--content");
 const mainNotify = document.querySelector(".main--notify");
 const footerLegal = document.querySelector(".footer--legal");
 
-const toybox = document.getElementById("toybox");
-const btnToggleToybox = document.getElementById("btn-toggle-toybox");
-const btnToggleBgcolors = document.getElementById("btn-toggle-bgcolors");
+const btnToggleBgColors = document.querySelector(".btn-toggle-bg-colors");
+const btnShowToybox = document.querySelector(".btn-show-toybox");
+const btnHideToybox = document.querySelector(".btn-hide-toybox");
 
 headerTitle.innerHTML = project.name;
 headerGreetUser.innerHTML = `Hello, ${project.userName}`;
 footerLegal.innerHTML = legalHTML;
 
-//
-// toybox - toggle vis
-btnToggleToybox.addEventListener("click", () =>
-  toybox.classList.toggle("toybox__display-none")
-);
-
-//
-// toybox - toggle contrast
-let contrastEnabled = false;
+/* toggle contrast */
+let isContrasted = false;
 
 function toggleContrast() {
-  contrastEnabled ? disableContrast() : enableContrast();
+  isContrasted ? disableContrast() : enableContrast();
 }
 
 function enableContrast() {
-  contrastEnabled = true;
+  isContrasted = true;
   _toggleContrast();
 }
 
 function disableContrast() {
-  contrastEnabled = false;
+  isContrasted = false;
   _toggleContrast();
 }
 
@@ -59,4 +53,13 @@ function _toggleContrast() {
   for (const obj of toggleContrastArr) obj.element.classList.toggle(obj.class);
 }
 
-btnToggleBgcolors.addEventListener("click", toggleContrast);
+/* show/hide toybox */
+function toggleToybox() {
+  btnShowToybox.classList.toggle("display-none");
+  toybox.classList.toggle("display-none");
+}
+
+/* event listeners */
+btnToggleBgColors.addEventListener("click", toggleContrast);
+btnShowToybox.addEventListener("click", toggleToybox);
+btnHideToybox.addEventListener("click", toggleToybox);

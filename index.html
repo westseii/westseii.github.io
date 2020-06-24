@@ -13,25 +13,29 @@
   </head>
 
   <body>
-    <button id="btn-toggle-toybox" class="btn-basic btn-basic__active">
-      toybox
-    </button>
+    <button class="btn-show-toybox btn-basic">show toybox</button>
 
-    <div id="toybox" class="toybox__display-none">
+    <div class="toybox display-none">
       <h2>toybox</h2>
       <hr class="hr-basic" />
       <div>
         <div class="toy-item">
           <p>background color contrast</p>
-          <button id="btn-toggle-bgcolors" class="btn-basic btn-basic__active">
+          <button class="btn-toggle-bg-colors btn-basic">
             on <span class="v-div"></span> off
           </button>
         </div>
+
         <div class="toy-item">
-          <p>toy2</p>
-          <button class="btn-basic btn-basic__disabled" disabled="disabled">
+          <p></p>
+          <button class="btn-basic" disabled="disabled">
             disabled
           </button>
+        </div>
+
+        <div class="toy-item">
+          <p>hide toybox</p>
+          <button class="btn-hide-toybox btn-basic">hide</button>
         </div>
       </div>
     </div>

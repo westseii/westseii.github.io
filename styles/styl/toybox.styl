@@ -1,29 +1,24 @@
 class--toybox()
-  #toybox
+  .toybox
     position: fixed;
     top: 60px;
     left: 20px;
     padding: 0 20px 20px 20px;
     width: 360px;
-    border-radius: 8px;
+    border-radius: 14px;
     background: weiWhite;
     mixin--box-shadow(2px, 0.1);
 
-  .toybox__display-none
-    display: none;
-
   .toy-item
     display: flex;
+    align-items: center;
     padding: 8px;
     line-height: 0;
 
-    &:nth-child(n+2)
-      color: weiAccent2;
+    & > button
+      margin-left: auto;
 
     &:nth-child(2n)
       padding: 6px;
       border: solid 2px weiAccent;
       border-radius: 8px;
-
-    & > *:last-child
-      margin-left: auto;
