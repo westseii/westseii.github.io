@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   height: 100%;
   font-size: 10px;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 }
 *,
 *::before,
@@ -12,8 +12,9 @@ html {
 body {
   height: inherit;
   background: #f2f2f2;
-  font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
@@ -21,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 1.6rem;
 }
 .header {
@@ -31,7 +32,8 @@ h6 {
   padding: 0 200px 0 400px;
   width: 100%;
   height: 40px;
-  background: #fc0;
+  background: #333;
+  color: #f2f2f2;
   box-shadow: 0 0 8px rgba(85,85,85,0.1);
 }
 .header > *:nth-child(2) {
@@ -66,21 +68,21 @@ h6 {
   display: flex;
   justify-content: center;
   padding: 40px 200px 40px 200px;
-  border-top: solid 2px #e6e6e6;
   text-align: center;
 }
 .btn-basic {
   position: relative;
   padding: 20px;
   border: none;
-  border-radius: 10px;
-  background: #d9d9d9;
+  border-radius: 20px;
+  background: #e6e6e6;
+  color: #333;
   line-height: 0;
   cursor: pointer;
   transition: 0.1s;
 }
 .btn-basic:hover {
-  background: #e6e6e6;
+  background: #d9d9d9;
 }
 .btn-basic:active {
   top: 1px;
@@ -98,7 +100,6 @@ h6 {
   position: fixed;
   top: 60px;
   left: 20px;
-  z-index: 10;
   box-shadow: 0 0 8px rgba(85,85,85,0.1);
 }
 .btn-show-toybox:active {
@@ -107,52 +108,22 @@ h6 {
 .display-none {
   display: none;
 }
-.hr-basic {
-  height: 2px;
-  border: none;
-  background: #e6e6e6;
-}
 .para {
   text-indent: 20px;
-}
-.test-notif {
-  padding: 10px;
-  background: #d9d9d9;
-  font-size: 1rem;
-  transition: 0.1s;
-}
-.test-notif:hover {
-  background: #e6e6e6;
-}
-.test-notif:first-child {
-  border-top-left-radius: 10px;
-}
-.test-notif:nth-child(n+2) {
-  border-top: solid 2px #f2f2f2;
-}
-.test-notif:last-child {
-  border-bottom-left-radius: 10px;
-}
-.test-notif--top {
-  display: flex;
-  margin-bottom: 10px;
-}
-.test-notif--top > span:last-child {
-  margin-left: auto;
 }
 .v-div::before {
   color: #f2f2f2;
   content: "|";
 }
 .test-card {
-  padding: 20px;
+  padding: 6px 18px;
+  border: solid 2px #e6e6e6;
   border-radius: 10px;
   background: #f2f2f2;
   transition: 0.1s;
-  box-shadow: 0 0 8px rgba(85,85,85,0.1);
 }
 .test-card:hover {
-  box-shadow: 0 0 16px rgba(85,85,85,0.2);
+  border: solid 2px #d9d9d9;
 }
 .test-card:nth-child(n+2) {
   margin-top: 20px;
@@ -171,6 +142,33 @@ h6 {
 }
 .bg-tc5 {
   background: #333;
+}
+.test-notif {
+  padding: 16px;
+  background: #e6e6e6;
+  color: #333;
+  font-size: 1.2rem;
+  transition: 0.1s;
+}
+.test-notif:hover {
+  background: #d9d9d9;
+}
+.test-notif:first-child {
+  border-top-left-radius: 20px;
+}
+.test-notif:nth-child(n+2) {
+  border-top: solid 2px #d9d9d9;
+}
+.test-notif:last-child {
+  border-bottom-left-radius: 20px;
+}
+.test-notif--top {
+  display: flex;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.test-notif--top > span:last-child {
+  margin-left: auto;
 }
 .toybox {
   position: fixed;

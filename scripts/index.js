@@ -5,10 +5,10 @@ import newTestNotif, { _testNotifArr } from "./modules/test.notification.js";
 document.title = project.name;
 
 /* selectors */
+const toybox = document.querySelector(".toybox");
+
 const header = document.querySelector(".header");
 const footer = document.querySelector(".footer");
-
-const toybox = document.querySelector(".toybox");
 
 const headerTitle = document.querySelector(".header--title");
 const headerGreetUser = document.querySelector(".header--greet-user");
@@ -66,14 +66,19 @@ btnToggleBgColors.addEventListener("click", toggleContrast);
 btnShowToybox.addEventListener("click", toggleToybox);
 btnHideToybox.addEventListener("click", toggleToybox);
 
+export { mainContent, mainNotify };
+
 /* TEST !!!!!!!!!!!!!!! */
 toggleToybox();
 
+newTestCard(mainContent, "Test");
+
 newTestCard(
   mainContent,
-  "Test",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reprehenderit mollitia expedita error quae? Dolore, dolor odit quasi accusantium qui quam iste, porro aperiam alias perferendis asperiores quibusdam quae ea nulla, voluptates laborum eligendi! Culpa neque numquam eius odio tenetur at cum eum, saepe, velit ab, magnam tempore? Adipisci sunt dolorem quae quod cumque sint quas impedit officia deserunt magnam? Nostrum sunt iste laboriosam!",
-  "Adios!"
+  "Test 2",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, at porro. Nostrum quasi placeat totam sequi?",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum maxime nobis corrupti est nostrum omnis accusamus quos consequuntur. Obcaecati voluptas ad culpa rerum fuga eaque cum, at consectetur eos praesentium minima nihil incidunt perferendis! Rem facilis ipsa corporis enim, voluptatem autem voluptatibus natus maiores vel sequi ut hic expedita sint in, fugiat quidem ducimus cum? Nihil voluptatibus ipsum et quidem magni, ullam laudantium debitis quod neque vitae sapiente animi nemo vel voluptas sunt iste aliquam dignissimos perspiciatis aperiam reprehenderit mollitia. Sapiente nulla expedita magni autem corporis nemo, fugiat tenetur molestias eum quam neque reiciendis. Quia culpa tempora eveniet laboriosam ad excepturi veniam blanditiis natus nisi, labore delectus ab sapiente ipsa voluptatibus.",
+  "adios"
 );
 
 newTestNotif(
@@ -81,13 +86,18 @@ newTestNotif(
   "Test",
   "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 );
+
 newTestNotif(
   mainNotify,
-  "Test",
+  "Test 2",
   "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 );
+
 newTestNotif(
   mainNotify,
-  "Test",
+  "Test 3",
   "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 );
+
+// window._testCardArr = _testCardArr;
+// window._testNotifArr = _testNotifArr;

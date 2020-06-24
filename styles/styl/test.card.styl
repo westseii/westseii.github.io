@@ -1,13 +1,13 @@
 class--test-card()
   .test-card
-    padding: 20px;
+    padding: 6px 18px;
+    border: solid 2px weiAccent;
     border-radius: 10px;
     background: weiWhite;
     transition: 0.1s;
-    mixin--box-shadow(2px, 0.1);
 
     &:hover
-      mixin--box-shadow();
+      border: solid 2px weiAccent2;
 
     &:nth-child(n+2)
       margin-top: 20px;

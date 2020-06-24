@@ -1,13 +1,10 @@
-@require "./styl/vars.styl";
-@require "./styl/general.styl";
-@require "./styl/toybox.styl";
-@require "./styl/test.card.styl";
+@import "./styl/*";
 
 html
   box-sizing: border-box;
   height: 100%;
   font-size: 10px;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
 
 *, *::before, *::after
   box-sizing: inherit;
@@ -15,10 +12,11 @@ html
 body
   height: inherit;
   background: weiWhite;
-  font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
+  color: weiDark;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
 
-type--headings(normal, 1.6rem);
+type--headings(bold, 1.6rem);
 
 .header
   position: fixed;
@@ -27,7 +25,8 @@ type--headings(normal, 1.6rem);
   padding: 0 200px 0 400px;
   width: 100%;
   height: 40px;
-  background: hawkeyeGold;
+  background: weiDark;
+  color: weiWhite;
   mixin--box-shadow(2px, 0.1);
 
   & > *:nth-child(2)
@@ -62,21 +61,21 @@ type--headings(normal, 1.6rem);
   display: flex;
   justify-content: center;
   padding: 40px 200px 40px 200px;
-  border-top: solid 2px weiAccent;
   text-align: center;
 
 .btn-basic
   position: relative;
   padding: 20px;
   border: none;
-  border-radius: 10px;
-  background: weiAccent2;
+  border-radius: 20px;
+  background: weiAccent;
+  color: weiDark;
   line-height: 0;
   cursor: pointer;
   transition: 0.1s;
 
   &:hover
-    background: weiAccent;
+    background: weiAccent2;
 
   &:active
     top: 1px;
@@ -94,7 +93,6 @@ type--headings(normal, 1.6rem);
   position: fixed;
   top: 60px;
   left: 20px;
-  z-index: 10;
   mixin--box-shadow(2px, 0.1);
 
   &:active
@@ -103,38 +101,8 @@ type--headings(normal, 1.6rem);
 .display-none
   display: none;
 
-.hr-basic
-  height: 2px;
-  border: none;
-  background: weiAccent;
-
 .para
   text-indent: 20px;
-
-.test-notif
-  padding: 10px;
-  background: weiAccent2;
-  font-size: 1rem;
-  transition: 0.1s;
-
-  &:hover
-    background: weiAccent;
-
-  &:first-child
-    border-top-left-radius: 10px;
-
-  &:nth-child(n+2)
-    border-top: solid 2px weiWhite;
-
-  &:last-child
-    border-bottom-left-radius: 10px;
-
-.test-notif--top
-  display: flex;
-  margin-bottom: 10px;
-
-  & > span:last-child
-    margin-left: auto;
 
 .v-div::before
   color: weiWhite;
@@ -142,4 +110,5 @@ type--headings(normal, 1.6rem);
 
 class--test-card();
 class--test-colors();
+class--test-notif();
 class--toybox();
