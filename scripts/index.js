@@ -87,17 +87,17 @@ newTestNotif(
   "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 );
 
-newTestNotif(
-  mainNotify,
-  "Test 2",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-);
+newTestNotif(mainNotify, "Test 2", "Lorem ipsum dolor sit.");
 
 newTestNotif(
   mainNotify,
   "Test 3",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, aperiam nobis sunt omnis esse sequi dolores, ex, laborum magnam earum est repellat neque eum ut? Velit fugit numquam doloremque, quaerat beatae excepturi!"
 );
+
+newTestNotif(mainNotify, "Test 4", "Lorem ipsum dolor sit.");
+
+newTestNotif(mainNotify, "Test 5", "Lorem ipsum dolor sit.");
 
 // window._testCardArr = _testCardArr;
 // window._testNotifArr = _testNotifArr;

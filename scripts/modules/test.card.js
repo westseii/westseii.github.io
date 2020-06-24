@@ -23,9 +23,9 @@ function _testCardElement(heading, ...paragraphs) {
   const para = document.createElement("p");
   para.className = "para";
 
-  for (const s of paragraphs) {
+  for (const sent of paragraphs) {
     const elementPara = para.cloneNode(false);
-    elementPara.innerHTML = s;
+    elementPara.innerHTML = sent;
     element.append(elementPara);
   }
 
