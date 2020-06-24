@@ -1,5 +1,6 @@
 import project, { legalHTML } from "./westseii.temp.js";
 import newTestCard, { _testCardArr } from "./modules/test.card.js";
+import newTestNotif, { _testNotifArr } from "./modules/test.notification.js";
 
 document.title = project.name;
 
@@ -66,9 +67,27 @@ btnShowToybox.addEventListener("click", toggleToybox);
 btnHideToybox.addEventListener("click", toggleToybox);
 
 /* TEST !!!!!!!!!!!!!!! */
+toggleToybox();
+
 newTestCard(
   mainContent,
   "Test",
   "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reprehenderit mollitia expedita error quae? Dolore, dolor odit quasi accusantium qui quam iste, porro aperiam alias perferendis asperiores quibusdam quae ea nulla, voluptates laborum eligendi! Culpa neque numquam eius odio tenetur at cum eum, saepe, velit ab, magnam tempore? Adipisci sunt dolorem quae quod cumque sint quas impedit officia deserunt magnam? Nostrum sunt iste laboriosam!",
   "Adios!"
+);
+
+newTestNotif(
+  mainNotify,
+  "Test",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+);
+newTestNotif(
+  mainNotify,
+  "Test",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+);
+newTestNotif(
+  mainNotify,
+  "Test",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 );

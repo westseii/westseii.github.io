@@ -7,7 +7,7 @@ html
   box-sizing: border-box;
   height: 100%;
   font-size: 10px;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
 
 *, *::before, *::after
   box-sizing: inherit;
@@ -15,10 +15,10 @@ html
 body
   height: inherit;
   background: weiWhite;
-  font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
 
-type--headings(bold, 1.8rem);
+type--headings(normal, 1.6rem);
 
 .header
   position: fixed;
@@ -73,7 +73,7 @@ type--headings(bold, 1.8rem);
   background: weiAccent2;
   line-height: 0;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.1s;
 
   &:hover
     background: weiAccent;
@@ -104,13 +104,37 @@ type--headings(bold, 1.8rem);
   display: none;
 
 .hr-basic
-  margin: 0;
   height: 2px;
   border: none;
   background: weiAccent;
 
 .para
   text-indent: 20px;
+
+.test-notif
+  padding: 10px;
+  background: weiAccent2;
+  font-size: 1rem;
+  transition: 0.1s;
+
+  &:hover
+    background: weiAccent;
+
+  &:first-child
+    border-top-left-radius: 10px;
+
+  &:nth-child(n+2)
+    border-top: solid 2px weiWhite;
+
+  &:last-child
+    border-bottom-left-radius: 10px;
+
+.test-notif--top
+  display: flex;
+  margin-bottom: 10px;
+
+  & > span:last-child
+    margin-left: auto;
 
 .v-div::before
   color: weiWhite;
