@@ -69,7 +69,7 @@ btnHideToybox.addEventListener("click", toggleToybox);
 export { mainContent, mainNotify };
 
 /* TEST !!!!!!!!!!!!!!! */
-toggleToybox();
+// toggleToybox();
 
 newTestCard(
   mainContent,
@@ -83,3 +83,40 @@ newTestNotif(mainNotify, "Notif 3", "Text");
 
 // window._testCardArr = _testCardArr;
 // window._testNotifArr = _testNotifArr;
+
+/* ajax - load plainText */
+const btnAjax1 = document.querySelector(".btn-ajax-1");
+const testTargetElement = ".ajax-1-inner";
+const testURL = "../test/text.txt";
+
+btnAjax1.addEventListener("click", () => loadText(testTargetElement, testURL));
+
+function loadText(targetElement, url) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open("GET", url, true);
+  xhr.onload = function () {
+    switch (this.status) {
+      case 200:
+        document.querySelector(targetElement).innerHTML = this.responseText;
+        break;
+      case 404:
+        document.querySelector(targetElement).innerHTML = "404 not found";
+        break;
+    }
+  };
+
+  xhr.onerror = function () {
+    console.log("Error");
+  };
+
+  xhr.send();
+}
+
+/* clear plainText */
+document
+  .querySelector(".btn-ajax-1-clear")
+  .addEventListener(
+    "click",
+    () => (document.querySelector(testTargetElement).innerHTML = "")
+  );
