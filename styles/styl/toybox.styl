@@ -3,22 +3,21 @@ class--toybox()
     position: fixed;
     top: 60px;
     left: 20px;
-    padding: 0 20px 20px 20px;
+    padding: 8px;
     width: 360px;
-    border-radius: 14px;
+    border-radius: 10px;
     background: weiWhite;
     mixin--box-shadow(2px, 0.1);
 
   .toy-item
     display: flex;
     align-items: center;
-    padding: 8px;
-    line-height: 0;
+    padding: 10px;
 
-    & > button
+    & > .btn-basic
       margin-left: auto;
 
     &:nth-child(2n)
-      padding: 6px;
+      padding: 12px 8px;
       border: solid 2px weiAccent;
-      border-radius: 8px;
+      border-radius: 10px;

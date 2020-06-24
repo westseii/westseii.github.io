@@ -65,6 +65,10 @@ btnToggleBgColors.addEventListener("click", toggleContrast);
 btnShowToybox.addEventListener("click", toggleToybox);
 btnHideToybox.addEventListener("click", toggleToybox);
 
-//
-// TEST
-newTestCard(mainContent, "Test");
+/* TEST !!!!!!!!!!!!!!! */
+newTestCard(
+  mainContent,
+  "Test",
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius reprehenderit mollitia expedita error quae? Dolore, dolor odit quasi accusantium qui quam iste, porro aperiam alias perferendis asperiores quibusdam quae ea nulla, voluptates laborum eligendi! Culpa neque numquam eius odio tenetur at cum eum, saepe, velit ab, magnam tempore? Adipisci sunt dolorem quae quod cumque sint quas impedit officia deserunt magnam? Nostrum sunt iste laboriosam!",
+  "Adios!"
+);

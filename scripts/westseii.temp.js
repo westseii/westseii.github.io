@@ -8,7 +8,7 @@ const dateOptions = {
 
 const project = {
   name: "Playground",
-  version: "a.1.1",
+  version: "a.1.2",
   userName: "User",
   date: date.toLocaleDateString("en-US", dateOptions),
 };

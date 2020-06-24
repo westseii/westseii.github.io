@@ -18,7 +18,7 @@ body
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
 
-type--headings(normal, 1.8rem);
+type--headings(bold, 1.8rem);
 
 .header
   position: fixed;
@@ -67,12 +67,13 @@ type--headings(normal, 1.8rem);
 
 .btn-basic
   position: relative;
-  padding: 0 20px;
-  height: 2.8rem;
+  padding: 20px;
   border: none;
-  border-radius: 14px;
+  border-radius: 10px;
   background: weiAccent2;
+  line-height: 0;
   cursor: pointer;
+  transition: 0.2s;
 
   &:hover
     background: weiAccent;
@@ -108,10 +109,13 @@ type--headings(normal, 1.8rem);
   border: none;
   background: weiAccent;
 
+.para
+  text-indent: 20px;
+
 .v-div::before
   color: weiWhite;
   content: "|";
 
+class--test-card();
 class--test-colors();
 class--toybox();
-class--test-card();

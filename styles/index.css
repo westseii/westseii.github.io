@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 1.8rem;
 }
 .header {
@@ -71,12 +71,13 @@ h6 {
 }
 .btn-basic {
   position: relative;
-  padding: 0 20px;
-  height: 2.8rem;
+  padding: 20px;
   border: none;
-  border-radius: 14px;
+  border-radius: 10px;
   background: #d9d9d9;
+  line-height: 0;
   cursor: pointer;
+  transition: 0.2s;
 }
 .btn-basic:hover {
   background: #e6e6e6;
@@ -112,9 +113,25 @@ h6 {
   border: none;
   background: #e6e6e6;
 }
+.para {
+  text-indent: 20px;
+}
 .v-div::before {
   color: #f2f2f2;
   content: "|";
+}
+.test-card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #f2f2f2;
+  transition: 0.2s;
+  box-shadow: 0 2px 6px rgba(85,85,85,0.1);
+}
+.test-card:hover {
+  box-shadow: 0 4px 12px rgba(85,85,85,0.2);
+}
+.test-card:nth-child(n+2) {
+  margin-top: 20px;
 }
 .bg-tc1 {
   background: #ffc0cb;
@@ -135,35 +152,22 @@ h6 {
   position: fixed;
   top: 60px;
   left: 20px;
-  padding: 0 20px 20px 20px;
+  padding: 8px;
   width: 360px;
-  border-radius: 14px;
+  border-radius: 10px;
   background: #f2f2f2;
   box-shadow: 0 2px 6px rgba(85,85,85,0.1);
 }
 .toy-item {
   display: flex;
   align-items: center;
-  padding: 8px;
-  line-height: 0;
+  padding: 10px;
 }
-.toy-item > button {
+.toy-item > .btn-basic {
   margin-left: auto;
 }
 .toy-item:nth-child(2n) {
-  padding: 6px;
+  padding: 12px 8px;
   border: solid 2px #e6e6e6;
-  border-radius: 8px;
-}
-.test-card {
-  padding: 20px;
-  border-radius: 14px;
-  background: #f2f2f2;
-  box-shadow: 0 2px 6px rgba(85,85,85,0.1);
-}
-.test-card:nth-child(n+2) {
-  margin-top: 20px;
-}
-.para {
-  text-indent: 20px;
+  border-radius: 10px;
 }

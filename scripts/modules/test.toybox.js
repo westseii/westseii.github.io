@@ -4,4 +4,6 @@ class TestToybox extends HTMLElement {
   }
 }
 
+/* not in use */
+
 customElements.define("test-toybox", TestToybox);
