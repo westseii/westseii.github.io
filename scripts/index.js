@@ -71,33 +71,15 @@ export { mainContent, mainNotify };
 /* TEST !!!!!!!!!!!!!!! */
 toggleToybox();
 
-newTestCard(mainContent, "Test");
-
 newTestCard(
   mainContent,
-  "Test 2",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, at porro. Nostrum quasi placeat totam sequi?",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eum maxime nobis corrupti est nostrum omnis accusamus quos consequuntur. Obcaecati voluptas ad culpa rerum fuga eaque cum, at consectetur eos praesentium minima nihil incidunt perferendis! Rem facilis ipsa corporis enim, voluptatem autem voluptatibus natus maiores vel sequi ut hic expedita sint in, fugiat quidem ducimus cum? Nihil voluptatibus ipsum et quidem magni, ullam laudantium debitis quod neque vitae sapiente animi nemo vel voluptas sunt iste aliquam dignissimos perspiciatis aperiam reprehenderit mollitia. Sapiente nulla expedita magni autem corporis nemo, fugiat tenetur molestias eum quam neque reiciendis. Quia culpa tempora eveniet laboriosam ad excepturi veniam blanditiis natus nisi, labore delectus ab sapiente ipsa voluptatibus.",
-  "adios"
+  "Hi",
+  "No frameworks, no fuss, no muss.",
+  "Scroll down for edgy quote."
 );
-
-newTestNotif(
-  mainNotify,
-  "Test",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-);
-
-newTestNotif(mainNotify, "Test 2", "Lorem ipsum dolor sit.");
-
-newTestNotif(
-  mainNotify,
-  "Test 3",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, aperiam nobis sunt omnis esse sequi dolores, ex, laborum magnam earum est repellat neque eum ut? Velit fugit numquam doloremque, quaerat beatae excepturi!"
-);
-
-newTestNotif(mainNotify, "Test 4", "Lorem ipsum dolor sit.");
-
-newTestNotif(mainNotify, "Test 5", "Lorem ipsum dolor sit.");
+newTestNotif(mainNotify, "Notif", "Text");
+newTestNotif(mainNotify, "Notif 2", "Text");
+newTestNotif(mainNotify, "Notif 3", "Text");
 
 // window._testCardArr = _testCardArr;
 // window._testNotifArr = _testNotifArr;
