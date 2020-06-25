@@ -1,6 +1,7 @@
 import project, { legalHTML } from "./westseii.temp.js";
 import newTestCard, { _testCardArr } from "./modules/test.card.js";
 import newTestNotif, { _testNotifArr } from "./modules/test.notification.js";
+import loadText from "./modules/load.text.js";
 
 document.title = project.name;
 
@@ -17,15 +18,15 @@ const mainContent = document.querySelector(".main--content");
 const mainNotify = document.querySelector(".main--notify");
 const footerLegal = document.querySelector(".footer--legal");
 
-const btnToggleBgColors = document.querySelector(".btn-toggle-bg-colors");
 const btnShowToybox = document.querySelector(".btn-show-toybox");
 const btnHideToybox = document.querySelector(".btn-hide-toybox");
+const btnToggleBgColors = document.querySelector(".btn-toggle-bg-colors");
 
 headerTitle.innerHTML = project.name;
 headerGreetUser.innerHTML = `Hello, ${project.userName}`;
 footerLegal.innerHTML = legalHTML;
 
-/* toggle contrast */
+/* toggle bg contrast colors */
 let isContrasted = false;
 
 function toggleContrast() {
@@ -66,57 +67,32 @@ btnToggleBgColors.addEventListener("click", toggleContrast);
 btnShowToybox.addEventListener("click", toggleToybox);
 btnHideToybox.addEventListener("click", toggleToybox);
 
-export { mainContent, mainNotify };
+document.querySelector(
+  ".test-card-date"
+).innerHTML = `Today is ${project.date}.`;
 
-/* TEST !!!!!!!!!!!!!!! */
-// toggleToybox();
+/* ajax vars */
+const btnAjax1 = document.querySelector(".btn-ajax-1");
+const btnAjax1Clear = document.querySelector(".btn-ajax-1-clear");
+const testTargetElement1 = ".ajax-1-inner";
+const testURL1 = "../test/text.txt";
 
-newTestCard(
-  mainContent,
-  "Hi",
-  "No frameworks, no fuss, no muss.",
-  "Scroll down for edgy quote."
+/* load plainText */
+btnAjax1.addEventListener("click", () =>
+  loadText(document.querySelector(".ajax-1-inner"), testURL1)
 );
+
+/* clear plainText */
+btnAjax1Clear.addEventListener(
+  "click",
+  () => (document.querySelector(testTargetElement1).innerHTML = "")
+);
+
 newTestNotif(mainNotify, "Notif", "Text");
 newTestNotif(mainNotify, "Notif 2", "Text");
 newTestNotif(mainNotify, "Notif 3", "Text");
 
+// test
+// toggleToybox();
 // window._testCardArr = _testCardArr;
 // window._testNotifArr = _testNotifArr;
-
-/* ajax - load plainText */
-const btnAjax1 = document.querySelector(".btn-ajax-1");
-const testTargetElement = ".ajax-1-inner";
-const testURL = "../test/text.txt";
-
-btnAjax1.addEventListener("click", () => loadText(testTargetElement, testURL));
-
-function loadText(targetElement, url) {
-  const xhr = new XMLHttpRequest();
-
-  xhr.open("GET", url, true);
-  xhr.onload = function () {
-    switch (this.status) {
-      case 200:
-        document.querySelector(targetElement).innerHTML = this.responseText;
-        break;
-      case 404:
-        document.querySelector(targetElement).innerHTML = "404 not found";
-        break;
-    }
-  };
-
-  xhr.onerror = function () {
-    console.log("Error");
-  };
-
-  xhr.send();
-}
-
-/* clear plainText */
-document
-  .querySelector(".btn-ajax-1-clear")
-  .addEventListener(
-    "click",
-    () => (document.querySelector(testTargetElement).innerHTML = "")
-  );
