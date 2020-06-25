@@ -5,7 +5,9 @@ import loadText from "./modules/load.text.js";
 
 document.title = project.name;
 
+//
 /* selectors */
+
 const toybox = document.querySelector(".toybox");
 
 const header = document.querySelector(".header");
@@ -26,7 +28,9 @@ headerTitle.innerHTML = project.name;
 headerGreetUser.innerHTML = `Hello, ${project.userName}`;
 footerLegal.innerHTML = legalHTML;
 
+//
 /* toggle bg contrast colors */
+
 let isContrasted = false;
 
 function toggleContrast() {
@@ -56,43 +60,56 @@ function _toggleContrast() {
   for (const obj of toggleContrastArr) obj.element.classList.toggle(obj.class);
 }
 
-/* show/hide toybox */
+btnToggleBgColors.addEventListener("click", toggleContrast);
+
+//
+/* toggle toybox visibility */
+
 function toggleToybox() {
   btnShowToybox.classList.toggle("display-none");
   toybox.classList.toggle("display-none");
 }
 
-/* events - buttons */
-btnToggleBgColors.addEventListener("click", toggleContrast);
 btnShowToybox.addEventListener("click", toggleToybox);
 btnHideToybox.addEventListener("click", toggleToybox);
+
+//
+/* display current date */
 
 document.querySelector(
   ".test-card-date"
 ).innerHTML = `Today is ${project.date}.`;
 
-/* ajax vars */
+//
+/* ajax1 - vars */
+
 const btnAjax1 = document.querySelector(".btn-ajax-1");
 const btnAjax1Clear = document.querySelector(".btn-ajax-1-clear");
 const testTargetElement1 = ".ajax-1-inner";
 const testURL1 = "../test/text.txt";
 
-/* load plainText */
+//
+/* ajax1 - load plaintext */
+
 btnAjax1.addEventListener("click", () =>
   loadText(document.querySelector(".ajax-1-inner"), testURL1)
 );
 
-/* clear plainText */
+//
+/* ajax1 - clear plaintext */
+
 btnAjax1Clear.addEventListener(
   "click",
   () => (document.querySelector(testTargetElement1).innerHTML = "")
 );
 
-newTestNotif(mainNotify, "Notif", "Text");
-newTestNotif(mainNotify, "Notif 2", "Text");
-newTestNotif(mainNotify, "Notif 3", "Text");
+//
+/* temp */
 
-// test
-// toggleToybox();
-// window._testCardArr = _testCardArr;
-// window._testNotifArr = _testNotifArr;
+toggleToybox();
+
+newTestNotif(
+  mainNotify,
+  "Notification",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, molestiae ipsam! Iste, cupiditate necessitatibus! Nihil, cumque."
+);

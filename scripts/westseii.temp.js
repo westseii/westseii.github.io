@@ -1,3 +1,6 @@
+//
+/* project placeholders */
+
 const date = new Date();
 const dateOptions = {
   weekday: "short",
@@ -7,8 +10,8 @@ const dateOptions = {
 };
 
 const project = {
-  name: "Scooterville",
-  version: "a.1.2",
+  name: "Playground",
+  version: "a.1.3",
   userName: "UncannyToucan ( * ph )",
   date: date.toLocaleDateString("en-US", dateOptions),
 };
@@ -21,7 +24,7 @@ const legalHTML = `
   solution. Know yourselves—be infertile and let the earth be silent after ye."
   — Peter Wessel Zapffe
 </p>
-<p>${project.version}</p>
+<p class="footer--version">${project.version}</p>
 `;
 
 export default project;

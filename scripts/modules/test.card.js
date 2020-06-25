@@ -1,3 +1,6 @@
+//
+/* data */
+
 const _testCardArr = [];
 
 let _id = 0;
@@ -13,6 +16,9 @@ function _testCardObject(heading, ...paragraphs) {
 }
 
 function _testCardElement(heading, ...paragraphs) {
+  //
+  /* build the test card element */
+
   const element = document.createElement("div");
   element.className = "test-card";
 
@@ -23,6 +29,9 @@ function _testCardElement(heading, ...paragraphs) {
   const para = document.createElement("p");
   para.className = "para";
 
+  //
+  /* test card elements must have one heading and ANY number of indented paragraphs */
+
   for (const sent of paragraphs) {
     const elementPara = para.cloneNode(false);
     elementPara.innerHTML = sent;
@@ -31,6 +40,9 @@ function _testCardElement(heading, ...paragraphs) {
 
   return element;
 }
+
+//
+/* default function */
 
 function newTestCard(targetElement, heading, ...paragraphs) {
   _testCardArr.push(_testCardObject(heading, ...paragraphs));

@@ -28,16 +28,16 @@ type--headings(normal, 1.6rem);
   height: 40px;
   background: weiDark;
   color: weiWhite;
-  mixin--box-shadow(2px, 0.1);
 
 .header-div
   min-width: calc(100% - 300px);
   max-width: calc(100% - 300px);
 
 .header--title
-  // manual adjustment for Kalam font
+  // top positional adjustment for Kalam font
   position: relative;
   top: 2px;
+  padding-left: 10px;
   font-weight: bold;
   font-size: 2.4rem;
   font-family: "Kalam", cursive;
@@ -79,6 +79,14 @@ type--headings(normal, 1.6rem);
   padding: 40px 400px 40px 400px;
   text-align: center;
 
+.footer--version
+  display: inline-block;
+  padding: 20px;
+  border-radius: 20px;
+  background: weiDark;
+  color: weiWhite;
+  line-height: 0;
+
 .btn-basic
   position: relative;
   padding: 20px;
@@ -110,13 +118,44 @@ type--headings(normal, 1.6rem);
   position: fixed;
   top: 60px;
   left: 20px;
-  mixin--box-shadow(2px, 0.1);
 
   &:active
     top: 61px;
 
 .display-none
   display: none;
+
+.nav-basic
+  &:link
+    padding: 20px 10px;
+    background: weiAccent;
+    color: weiDark;
+    text-decoration: none;
+    line-height: 0;
+    transition: 0.1s;
+
+  &:visited
+    color: weiDark;
+
+  &:hover
+    background: weiAccent2;
+
+  &:active
+    background: weiAccent3;
+
+  &:first-child
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+  &:nth-child(n+2)
+    margin-top: 2px;
+
+  &:last-child
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+.nav-basic--sel
+  border-right: solid 10px hawkeyeGold;
 
 .para
   text-indent: 20px;

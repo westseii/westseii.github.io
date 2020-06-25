@@ -35,7 +35,6 @@ h6 {
   height: 40px;
   background: #333;
   color: #f2f2f2;
-  box-shadow: 0 0 8px rgba(85,85,85,0.1);
 }
 .header-div {
   min-width: calc(100% - 300px);
@@ -44,6 +43,7 @@ h6 {
 .header--title {
   position: relative;
   top: 2px;
+  padding-left: 10px;
   font-weight: bold;
   font-size: 2.4rem;
   font-family: "Kalam", cursive;
@@ -85,6 +85,14 @@ h6 {
   padding: 40px 400px 40px 400px;
   text-align: center;
 }
+.footer--version {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 20px;
+  background: #333;
+  color: #f2f2f2;
+  line-height: 0;
+}
 .btn-basic {
   position: relative;
   padding: 20px;
@@ -116,13 +124,43 @@ h6 {
   position: fixed;
   top: 60px;
   left: 20px;
-  box-shadow: 0 0 8px rgba(85,85,85,0.1);
 }
 .btn-show-toybox:active {
   top: 61px;
 }
 .display-none {
   display: none;
+}
+.nav-basic:link {
+  padding: 20px 10px;
+  background: #e6e6e6;
+  color: #333;
+  text-decoration: none;
+  line-height: 0;
+  transition: 0.1s;
+}
+.nav-basic:visited {
+  color: #333;
+}
+.nav-basic:hover {
+  background: #d9d9d9;
+}
+.nav-basic:active {
+  background: #ccc;
+}
+.nav-basic:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.nav-basic:nth-child(n+2) {
+  margin-top: 2px;
+}
+.nav-basic:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.nav-basic--sel {
+  border-right: solid 10px #fc0;
 }
 .para {
   text-indent: 20px;
@@ -173,7 +211,7 @@ h6 {
   border-top-left-radius: 10px;
 }
 .test-notif:nth-child(n+2) {
-  border-top: solid 2px #f2f2f2;
+  margin-top: 2px;
 }
 .test-notif:last-child {
   border-bottom-left-radius: 10px;

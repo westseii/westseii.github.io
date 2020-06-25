@@ -20,9 +20,7 @@
       <div>
         <div class="toy-item">
           <p>Background color contrast</p>
-          <button class="btn-toggle-bg-colors btn-basic">
-            On <span class="v-div"></span> Off
-          </button>
+          <button class="btn-toggle-bg-colors btn-basic">Toggle</button>
         </div>
 
         <div class="toy-item">
@@ -52,22 +50,29 @@
 
     <main class="main">
       <nav class="main--nav">
-        <span>( * need to style these... )</span>
-        <a href="http://" target="_blank" rel="noopener noreferrer">Do</a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">Re</a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">Mi</a>
+        <a class="nav-basic nav-basic--sel" href="#">Home</a>
+        <a class="nav-basic" href="#">Link</a>
+        <a class="nav-basic" href="#">Link 2</a>
       </nav>
 
       <section class="main--content">
         <div class="test-card">
           <h2 class="test-card-date"></h2>
+          <p>My pure JavaScript playground.</p>
         </div>
 
         <div class="test-card">
-          <p>Load text from a file.</p>
-          <button class="btn-ajax-1 btn-basic">Load text</button>
-          <button class="btn-ajax-1-clear btn-basic">Clear text</button>
+          <p>Load text from a file. (ajax1)</p>
+          <button class="btn-ajax-1 btn-basic">Load</button>
+          <button class="btn-ajax-1-clear btn-basic">Clear</button>
           <p class="ajax-1-inner para"></p>
+        </div>
+
+        <div class="test-card">
+          <p>Load data from JSON. (ajax2)</p>
+          <button class="btn-ajax-2 btn-basic">Load</button>
+          <button class="btn-ajax-2-clear btn-basic">Clear</button>
+          <p class="ajax-2-inner para"></p>
         </div>
       </section>
 
