@@ -25,7 +25,7 @@ function _testNotifElement(heading, text) {
   /* build the test notif element from a template literal */
 
   const HTML = `
-  <div class="test-notif--top">
+  <div class="test-notif__top">
     <span>${heading}</span>
     <span>${project.date}</span>
   </div>

@@ -10,39 +10,37 @@ import loadPlaintext from "./modules/load.plaintext.js";
 const toybox = $(".toybox");
 
 const header = $(".header");
-const headerTitle = $(".header--title");
-const headerGreetUser = $(".header--greet-user");
-const mainNav = $(".main--nav");
-const mainContent = $(".main--content");
-const mainNotify = $(".main--notify");
+const headerTitle = $(".header__div__title");
+const headerGreetUser = $(".header__div2__greet-user");
+const mainNav = $(".main__nav");
+const mainContent = $(".main__content");
+const mainNotify = $(".main__notif");
 const footer = $(".footer");
-const footerLegal = $(".footer--legal");
+const footerLegal = $(".legal");
 
 document.title = project.name;
 headerTitle.innerHTML = project.name;
-headerGreetUser.innerHTML = `Hello, ${project.userName}`;
+headerGreetUser.innerHTML = `Hello, ${project.userName} (temp)`;
 footerLegal.innerHTML = legalHTML;
 
 //
 /* toggle toybox vis */
 
-const btnShowToybox = $(".btn-show-toybox");
+const btnShowToybox = $(".btn-basic--btn-show-toybox");
 btnShowToybox.addEventListener("click", toggleToybox);
 const btnHideToybox = $(".btn-hide-toybox");
 btnHideToybox.addEventListener("click", toggleToybox);
 
 function toggleToybox() {
-  btnShowToybox.classList.toggle("display-none");
-  toybox.classList.toggle("display-none");
+  btnShowToybox.classList.toggle("hidden");
+  toybox.classList.toggle("hidden");
 }
 
 //
 /* toggle bg contrast colors */
 
-const btnToggleBgColors = $(".btn-toggle-bg-colors");
+const btnToggleBgColors = $(".btn-toggle-bg");
 btnToggleBgColors.addEventListener("click", toggleContrast);
-
-let isContrasted = false;
 
 const toggleContrastArr = [
   { element: document.body, class: "bg-tc5" },
@@ -54,39 +52,29 @@ const toggleContrastArr = [
 ];
 
 function toggleContrast() {
-  if (isContrasted) {
-    isContrasted = false;
-    _toggleContrast();
-  } else {
-    isContrasted = true;
-    _toggleContrast();
-  }
-}
-
-function _toggleContrast() {
   for (const obj of toggleContrastArr) obj.element.classList.toggle(obj.class);
 }
 
 //
 /* show current date */
 
-$(".test-card-date").innerHTML = `Today is ${project.date}.`;
+$(".display-date").innerHTML = `Today is ${project.date}.`;
 
 //
 /* ajax1 - load plaintext */
 
-const testTargetElement1ClassName = ".ajax-1-inner";
+const testTargetElement1ClassName = ".ajax1-inner";
 const testURL1 = "../test/text.txt";
 
-const btnAjax1 = $(".btn-ajax-1");
+const btnAjax1 = $(".btn-ajax1");
 btnAjax1.addEventListener("click", () =>
-  loadPlaintext($(".ajax-1-inner"), testURL1)
+  loadPlaintext($(".ajax1-inner"), testURL1)
 );
 
 //
 /* ajax1 - clear plaintext */
 
-const btnAjax1Clear = $(".btn-ajax-1-clear");
+const btnAjax1Clear = $(".btn-ajax1-clear");
 btnAjax1Clear.addEventListener(
   "click",
   () => ($(testTargetElement1ClassName).innerHTML = "")
@@ -97,6 +85,18 @@ btnAjax1Clear.addEventListener(
 
 newTestNotif(
   mainNotify,
-  "Notification",
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, molestiae ipsam! Iste, cupiditate necessitatibus! Nihil, cumque."
+  "Test",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+);
+
+newTestNotif(
+  mainNotify,
+  "Test",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+);
+
+newTestNotif(
+  mainNotify,
+  "Test",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 );

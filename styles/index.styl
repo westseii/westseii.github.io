@@ -1,4 +1,4 @@
-@import "./styl/*";
+@require "./styl/*";
 
 html
   box-sizing: border-box;
@@ -16,7 +16,7 @@ body
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
 
-type--headings(normal, 1.6rem);
+tag--h1-h6(bold, 1.6rem);
 
 .header
   position: fixed;
@@ -29,46 +29,76 @@ type--headings(normal, 1.6rem);
   background: weiDark;
   color: weiWhite;
 
-.header-div
+.header__div
   min-width: calc(100% - 300px);
   max-width: calc(100% - 300px);
 
-.header--title
-  // top positional adjustment for Kalam font
+.header__div__title
+  // positional adjustment for "Kalam" font
   position: relative;
   top: 2px;
-  padding-left: 10px;
+  padding-left: 20px;
   font-weight: bold;
   font-size: 2.4rem;
   font-family: "Kalam", cursive;
 
-.header-div2
+.header__div2
   margin-left: auto;
   padding-left: 20px;
   min-width: 300px;
   max-width: 300px;
 
-.header--greet-user
-  padding-left: 10px;
+.header__div2__greet-user
+  padding-left: 20px;
 
 .main
   display: flex;
   padding: 40px 0 0 400px;
   min-height: 100%;
 
-.main--nav
+.main__nav
   display: flex;
   flex-direction: column;
   padding: 20px 20px 20px 0;
   min-width: 200px;
   max-width: 200px;
 
-.main--content
+.main__nav__link
+  &:link
+    padding: 15px 20px;
+    background: weiAccent;
+    color: weiDark;
+    text-decoration: none;
+    line-height: 0;
+    transition: 0.1s;
+
+  &:visited
+    color: weiDark;
+
+  &:hover
+    background: weiAccent2;
+
+  &:active
+    background: weiAccent3;
+
+  &:first-child
+    border-top-left-radius: 10px;
+
+  &:nth-child(n+2)
+    margin-top: 5px;
+
+  &:last-child
+    border-bottom-left-radius: 10px;
+
+.main__nav__link--s
+  border-right: solid 8px weiDark;
+
+.main__content
   padding: 20px 0 20px 0;
   min-width: calc(100% - 500px);
   max-width: calc(100% - 500px);
 
-.main--notify
+.main__notif
   padding: 20px 0 20px 20px;
   min-width: 300px;
   max-width: 300px;
@@ -79,16 +109,9 @@ type--headings(normal, 1.6rem);
   padding: 40px 400px 40px 400px;
   text-align: center;
 
-.footer--version
-  display: inline-block;
-  padding: 15px 20px;
-  border-radius: 10px;
-  background: weiDark;
-  color: weiWhite;
-  line-height: 0;
-
 .btn-basic
   position: relative;
+  margin-left: 4px;
   padding: 15px 20px;
   border: none;
   border-radius: 10px;
@@ -114,7 +137,7 @@ type--headings(normal, 1.6rem);
     background: weiFocus;
     color: weiWhite;
 
-.btn-show-toybox
+.btn-basic--btn-show-toybox
   position: fixed;
   top: 60px;
   left: 20px;
@@ -122,47 +145,21 @@ type--headings(normal, 1.6rem);
   &:active
     top: 61px;
 
-.display-none
+.hidden
   display: none;
-
-.nav-basic
-  &:link
-    padding: 15px 20px;
-    background: weiAccent;
-    color: weiDark;
-    text-decoration: none;
-    line-height: 0;
-    transition: 0.1s;
-
-  &:visited
-    color: weiDark;
-
-  &:hover
-    background: weiAccent2;
-
-  &:active
-    background: weiAccent3;
-
-  &:first-child
-    border-top-left-radius: 10px;
-
-  &:nth-child(n+2)
-    margin-top: 2px;
-
-  &:last-child
-    border-bottom-left-radius: 10px;
-
-.nav-basic--sel
-  border-right: solid 8px hawkeyeGold;
 
 .para
   text-indent: 20px;
 
-.v-div::before
+.version
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: weiDark;
   color: weiWhite;
-  content: "|";
+  line-height: 0;
 
+class--bg-test-colors();
 class--test-card();
-class--test-colors();
 class--test-notif();
 class--toybox();

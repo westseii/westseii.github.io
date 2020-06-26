@@ -12,7 +12,7 @@ const dateOptions = {
 const project = {
   name: "Playground",
   version: "a.1.3",
-  userName: "UncannyToucan ( * ph )",
+  userName: "UncannyToucan",
   date: date.toLocaleDateString("en-US", dateOptions),
 };
 
@@ -24,7 +24,7 @@ const legalHTML = `
   solution. Know yourselves—be infertile and let the earth be silent after ye."
   — Peter Wessel Zapffe
 </p>
-<p class="footer--version">${project.version}</p>
+<p class="version">${project.version}</p>
 `;
 
 export default project;
