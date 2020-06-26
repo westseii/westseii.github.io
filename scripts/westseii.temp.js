@@ -11,7 +11,7 @@ const dateOptions = {
 
 const project = {
   name: "Playground",
-  version: "a.1.3",
+  version: "0.1.3",
   userName: "UncannyToucan",
   date: date.toLocaleDateString("en-US", dateOptions),
 };

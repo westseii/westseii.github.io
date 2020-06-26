@@ -1,8 +1,9 @@
 import project, { legalHTML } from "./westseii.temp.js";
 import { $ } from "./modules/binds.js";
 import newTestCard, { _testCardArr } from "./modules/test.card.js";
-import newTestNotif, { _testNotifArr } from "./modules/test.notification.js";
+import newTestNotif, { _testNotifArr } from "./modules/test.notif.js";
 import loadPlaintext from "./modules/load.plaintext.js";
+import domNodeString from "./modules/dom.node.string.js";
 
 //
 /* selectors */
@@ -78,25 +79,4 @@ const btnAjax1Clear = $(".btn-ajax1-clear");
 btnAjax1Clear.addEventListener(
   "click",
   () => ($(testTargetElement1ClassName).innerHTML = "")
-);
-
-//
-/* temp */
-
-newTestNotif(
-  mainNotify,
-  "Test",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-);
-
-newTestNotif(
-  mainNotify,
-  "Test",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
-);
-
-newTestNotif(
-  mainNotify,
-  "Test",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 );

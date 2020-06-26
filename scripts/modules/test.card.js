@@ -30,7 +30,7 @@ function _testCardElement(heading, ...paragraphs) {
   para.className = "para";
 
   //
-  /* test card elements must have one heading and ANY number of indented paragraphs */
+  /* test card elements have one heading and ANY number of indented paragraphs */
 
   for (const sent of paragraphs) {
     const elementPara = para.cloneNode(false);
@@ -40,9 +40,6 @@ function _testCardElement(heading, ...paragraphs) {
 
   return element;
 }
-
-//
-/* default */
 
 function newTestCard(targetElement, heading, ...paragraphs) {
   _testCardArr.push(_testCardObject(heading, ...paragraphs));

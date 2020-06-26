@@ -36,9 +36,6 @@ function _testNotifElement(heading, text) {
   return element;
 }
 
-//
-/* default */
-
 function newTestNotif(targetElement, heading, text) {
   _testNotifArr.push(_testNotifObject(heading, text));
   targetElement.append(_testNotifElement(heading, text));
