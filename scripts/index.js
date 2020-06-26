@@ -1,9 +1,12 @@
 import project, { legalHTML } from "./westseii.temp.js";
-import { $ } from "./modules/binds.js";
+
+import { $ } from "./qol/binds.js";
+import domNodeString from "./qol/dom.node.string.js";
+import loadPlaintext from "./qol/load.plaintext.js";
+import randomIntInclusive from "./qol/random.int.inclusive.js";
+
 import newTestCard, { _testCardArr } from "./modules/test.card.js";
 import newTestNotif, { _testNotifArr } from "./modules/test.notif.js";
-import loadPlaintext from "./modules/load.plaintext.js";
-import domNodeString from "./modules/dom.node.string.js";
 
 //
 /* selectors */
@@ -11,8 +14,8 @@ import domNodeString from "./modules/dom.node.string.js";
 const toybox = $(".toybox");
 
 const header = $(".header");
-const headerTitle = $(".header__div__title");
-const headerGreetUser = $(".header__div2__greet-user");
+const headerTitle = $(".header__title");
+const headerGreetUser = $(".header__greet-user");
 const mainNav = $(".main__nav");
 const mainContent = $(".main__content");
 const mainNotify = $(".main__notif");
@@ -59,7 +62,7 @@ function toggleContrast() {
 //
 /* show current date */
 
-$(".display-date").innerHTML = `Today is ${project.date}.`;
+$(".display-date").innerHTML = project.date;
 
 //
 /* ajax1 - load plaintext */
@@ -80,3 +83,5 @@ btnAjax1Clear.addEventListener(
   "click",
   () => ($(testTargetElement1ClassName).innerHTML = "")
 );
+
+newTestNotif(mainNotify, "notification", "notification");

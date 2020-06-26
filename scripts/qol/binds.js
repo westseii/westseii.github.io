@@ -1,5 +1,5 @@
 //
-/* got tired of typing document.querySelector */
+/* shorthand for document.querySelector */
 
 const $ = document.querySelector.bind(document);
 

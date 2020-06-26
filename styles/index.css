@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.6rem;
 }
 .header {
@@ -40,10 +40,9 @@ h6 {
   min-width: calc(100% - 300px);
   max-width: calc(100% - 300px);
 }
-.header__div__title {
+.header__title {
   position: relative;
   top: 2px;
-  padding-left: 20px;
   font-weight: bold;
   font-size: 2.4rem;
   font-family: "Kalam", cursive;
@@ -54,7 +53,7 @@ h6 {
   min-width: 300px;
   max-width: 300px;
 }
-.header__div2__greet-user {
+.header__greet-user {
   padding-left: 20px;
 }
 .main {
@@ -69,39 +68,26 @@ h6 {
   min-width: 200px;
   max-width: 200px;
 }
-.main__nav__link:link {
-  padding: 15px 20px;
-  background: #e6e6e6;
+.main__link:link {
+  padding: 15px 0;
   color: #333;
   text-decoration: none;
   line-height: 0;
-  transition: 0.1s;
 }
-.main__nav__link:visited {
+.main__link:visited {
   color: #333;
 }
-.main__nav__link:hover {
-  background: #d9d9d9;
-}
-.main__nav__link:active {
-  background: #ccc;
-}
-.main__nav__link:first-child {
-  border-top-left-radius: 10px;
-}
-.main__nav__link:nth-child(n+2) {
-  margin-top: 5px;
-}
-.main__nav__link:last-child {
-  border-bottom-left-radius: 10px;
-}
-.main__nav__link--s {
-  border-right: solid 8px #333;
+.main__link:hover {
+  color: #808080;
+  text-decoration: underline;
 }
 .main__content {
   padding: 20px 0 20px 0;
   min-width: calc(100% - 500px);
   max-width: calc(100% - 500px);
+}
+.main__h2 {
+  text-indent: 20px;
 }
 .main__notif {
   padding: 20px 0 20px 20px;

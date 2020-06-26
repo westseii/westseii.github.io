@@ -1,4 +1,5 @@
 @require "./styl/*";
+@require "./styl/comp/*";
 
 html
   box-sizing: border-box;
@@ -16,7 +17,7 @@ body
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
 
-tag--h1-h6(bold, 1.6rem);
+tag--h1-h6(normal, 1.6rem);
 
 .header
   position: fixed;
@@ -33,11 +34,10 @@ tag--h1-h6(bold, 1.6rem);
   min-width: calc(100% - 300px);
   max-width: calc(100% - 300px);
 
-.header__div__title
+.header__title
   // positional adjustment for "Kalam" font
   position: relative;
   top: 2px;
-  padding-left: 20px;
   font-weight: bold;
   font-size: 2.4rem;
   font-family: "Kalam", cursive;
@@ -48,7 +48,7 @@ tag--h1-h6(bold, 1.6rem);
   min-width: 300px;
   max-width: 300px;
 
-.header__div2__greet-user
+.header__greet-user
   padding-left: 20px;
 
 .main
@@ -63,40 +63,27 @@ tag--h1-h6(bold, 1.6rem);
   min-width: 200px;
   max-width: 200px;
 
-.main__nav__link
+.main__link
   &:link
-    padding: 15px 20px;
-    background: weiAccent;
+    padding: 15px 0;
     color: weiDark;
     text-decoration: none;
     line-height: 0;
-    transition: 0.1s;
 
   &:visited
     color: weiDark;
 
   &:hover
-    background: weiAccent2;
-
-  &:active
-    background: weiAccent3;
-
-  &:first-child
-    border-top-left-radius: 10px;
-
-  &:nth-child(n+2)
-    margin-top: 5px;
-
-  &:last-child
-    border-bottom-left-radius: 10px;
-
-.main__nav__link--s
-  border-right: solid 8px weiDark;
+    color: weiDarkAccent2;
+    text-decoration: underline;
 
 .main__content
   padding: 20px 0 20px 0;
   min-width: calc(100% - 500px);
   max-width: calc(100% - 500px);
+
+.main__h2
+  text-indent: 20px;
 
 .main__notif
   padding: 20px 0 20px 20px;

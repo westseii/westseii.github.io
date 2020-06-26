@@ -1,8 +1,8 @@
 function loadPlaintext(targetElement, url) {
-  const xhrObject = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
 
-  xhrObject.open("GET", url, true);
-  xhrObject.onload = function () {
+  xhr.open("GET", url, true);
+  xhr.onload = function () {
     switch (this.status) {
       case 200:
         targetElement.innerHTML = this.responseText;
@@ -13,11 +13,11 @@ function loadPlaintext(targetElement, url) {
     }
   };
 
-  xhrObject.onerror = function () {
+  xhr.onerror = function () {
     console.log("xhr error");
   };
 
-  xhrObject.send();
+  xhr.send();
 }
 
 export default loadPlaintext;
