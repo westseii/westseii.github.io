@@ -1,51 +1,48 @@
 import project, { legalHTML } from "./westseii.temp.js";
+import { $ } from "./modules/binds.js";
 import newTestCard, { _testCardArr } from "./modules/test.card.js";
 import newTestNotif, { _testNotifArr } from "./modules/test.notification.js";
-import loadText from "./modules/load.text.js";
-
-document.title = project.name;
+import loadPlaintext from "./modules/load.plaintext.js";
 
 //
 /* selectors */
 
-const toybox = document.querySelector(".toybox");
+const toybox = $(".toybox");
 
-const header = document.querySelector(".header");
-const footer = document.querySelector(".footer");
+const header = $(".header");
+const headerTitle = $(".header--title");
+const headerGreetUser = $(".header--greet-user");
+const mainNav = $(".main--nav");
+const mainContent = $(".main--content");
+const mainNotify = $(".main--notify");
+const footer = $(".footer");
+const footerLegal = $(".footer--legal");
 
-const headerTitle = document.querySelector(".header--title");
-const headerGreetUser = document.querySelector(".header--greet-user");
-const mainNav = document.querySelector(".main--nav");
-const mainContent = document.querySelector(".main--content");
-const mainNotify = document.querySelector(".main--notify");
-const footerLegal = document.querySelector(".footer--legal");
-
-const btnShowToybox = document.querySelector(".btn-show-toybox");
-const btnHideToybox = document.querySelector(".btn-hide-toybox");
-const btnToggleBgColors = document.querySelector(".btn-toggle-bg-colors");
-
+document.title = project.name;
 headerTitle.innerHTML = project.name;
 headerGreetUser.innerHTML = `Hello, ${project.userName}`;
 footerLegal.innerHTML = legalHTML;
 
 //
+/* toggle toybox vis */
+
+const btnShowToybox = $(".btn-show-toybox");
+btnShowToybox.addEventListener("click", toggleToybox);
+const btnHideToybox = $(".btn-hide-toybox");
+btnHideToybox.addEventListener("click", toggleToybox);
+
+function toggleToybox() {
+  btnShowToybox.classList.toggle("display-none");
+  toybox.classList.toggle("display-none");
+}
+
+//
 /* toggle bg contrast colors */
 
+const btnToggleBgColors = $(".btn-toggle-bg-colors");
+btnToggleBgColors.addEventListener("click", toggleContrast);
+
 let isContrasted = false;
-
-function toggleContrast() {
-  isContrasted ? disableContrast() : enableContrast();
-}
-
-function enableContrast() {
-  isContrasted = true;
-  _toggleContrast();
-}
-
-function disableContrast() {
-  isContrasted = false;
-  _toggleContrast();
-}
 
 const toggleContrastArr = [
   { element: document.body, class: "bg-tc5" },
@@ -56,57 +53,47 @@ const toggleContrastArr = [
   { element: footer, class: "bg-tc1" },
 ];
 
+function toggleContrast() {
+  if (isContrasted) {
+    isContrasted = false;
+    _toggleContrast();
+  } else {
+    isContrasted = true;
+    _toggleContrast();
+  }
+}
+
 function _toggleContrast() {
   for (const obj of toggleContrastArr) obj.element.classList.toggle(obj.class);
 }
 
-btnToggleBgColors.addEventListener("click", toggleContrast);
-
 //
-/* toggle toybox visibility */
+/* show current date */
 
-function toggleToybox() {
-  btnShowToybox.classList.toggle("display-none");
-  toybox.classList.toggle("display-none");
-}
-
-btnShowToybox.addEventListener("click", toggleToybox);
-btnHideToybox.addEventListener("click", toggleToybox);
-
-//
-/* display current date */
-
-document.querySelector(
-  ".test-card-date"
-).innerHTML = `Today is ${project.date}.`;
-
-//
-/* ajax1 - vars */
-
-const btnAjax1 = document.querySelector(".btn-ajax-1");
-const btnAjax1Clear = document.querySelector(".btn-ajax-1-clear");
-const testTargetElement1 = ".ajax-1-inner";
-const testURL1 = "../test/text.txt";
+$(".test-card-date").innerHTML = `Today is ${project.date}.`;
 
 //
 /* ajax1 - load plaintext */
 
+const testTargetElement1ClassName = ".ajax-1-inner";
+const testURL1 = "../test/text.txt";
+
+const btnAjax1 = $(".btn-ajax-1");
 btnAjax1.addEventListener("click", () =>
-  loadText(document.querySelector(".ajax-1-inner"), testURL1)
+  loadPlaintext($(".ajax-1-inner"), testURL1)
 );
 
 //
 /* ajax1 - clear plaintext */
 
+const btnAjax1Clear = $(".btn-ajax-1-clear");
 btnAjax1Clear.addEventListener(
   "click",
-  () => (document.querySelector(testTargetElement1).innerHTML = "")
+  () => ($(testTargetElement1ClassName).innerHTML = "")
 );
 
 //
 /* temp */
-
-toggleToybox();
 
 newTestNotif(
   mainNotify,

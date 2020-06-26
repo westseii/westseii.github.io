@@ -87,17 +87,17 @@ h6 {
 }
 .footer--version {
   display: inline-block;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 15px 20px;
+  border-radius: 10px;
   background: #333;
   color: #f2f2f2;
   line-height: 0;
 }
 .btn-basic {
   position: relative;
-  padding: 20px;
+  padding: 15px 20px;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   background: #e6e6e6;
   color: #333;
   line-height: 0;
@@ -132,7 +132,7 @@ h6 {
   display: none;
 }
 .nav-basic:link {
-  padding: 20px 10px;
+  padding: 15px 20px;
   background: #e6e6e6;
   color: #333;
   text-decoration: none;
@@ -150,17 +150,15 @@ h6 {
 }
 .nav-basic:first-child {
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 .nav-basic:nth-child(n+2) {
   margin-top: 2px;
 }
 .nav-basic:last-child {
-  border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 .nav-basic--sel {
-  border-right: solid 10px #fc0;
+  border-right: solid 8px #fc0;
 }
 .para {
   text-indent: 20px;
@@ -218,7 +216,7 @@ h6 {
 }
 .test-notif--top {
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .test-notif--top > span:last-child {
   margin-left: auto;

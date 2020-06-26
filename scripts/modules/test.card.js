@@ -42,7 +42,7 @@ function _testCardElement(heading, ...paragraphs) {
 }
 
 //
-/* default function */
+/* default */
 
 function newTestCard(targetElement, heading, ...paragraphs) {
   _testCardArr.push(_testCardObject(heading, ...paragraphs));

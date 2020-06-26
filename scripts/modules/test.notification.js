@@ -37,7 +37,7 @@ function _testNotifElement(heading, text) {
 }
 
 //
-/* default function */
+/* default */
 
 function newTestNotif(targetElement, heading, text) {
   _testNotifArr.push(_testNotifObject(heading, text));
