@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Todo 1",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "isComplete": true
+  },
+  {
+    "name": "Todo 2",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "isComplete": true
+  },
+  {
+    "name": "Todo 3",
+    "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "isComplete": false
+  }
+]
