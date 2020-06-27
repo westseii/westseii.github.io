@@ -12,11 +12,7 @@ function loadPlaintext(targetElement, url) {
         break;
     }
   };
-
-  xhr.onerror = function () {
-    console.log("xhr error");
-  };
-
+  xhr.onerror = () => console.log("xhr error");
   xhr.send();
 }
 

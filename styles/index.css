@@ -166,7 +166,7 @@ h6 {
   background: #333;
 }
 .test-card {
-  padding: 8px 18px;
+  padding: 18px;
   border: solid 2px #e6e6e6;
   border-radius: 10px;
   background: #f2f2f2;
@@ -179,7 +179,7 @@ h6 {
   margin-top: 10px;
 }
 .test-notif {
-  padding: 10px 20px;
+  padding: 20px;
   background: #e6e6e6;
   color: #333;
   font-size: 1.2rem;
@@ -208,7 +208,7 @@ h6 {
   position: fixed;
   top: 60px;
   left: 20px;
-  padding: 10px;
+  padding: 20px;
   width: 360px;
   border-radius: 10px;
   background: #f2f2f2;

@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Beryl Strand",
+    "parent": "Irethian Tidelands",
+    "span": "10 and lower",
+    "qDungeon": "",
+    "hub": "Glendenport"
+  },
+  {
+    "name": "Mur Rainforest",
+    "parent": "Mur'akhrem",
+    "span": "10 and lower",
+    "qDungeon": "",
+    "hub": "Mur"
+  },
+  {
+    "name": "Sadoran Landfall",
+    "parent": "Augur Isles",
+    "span": "10 and lower",
+    "qDungeon": "",
+    "hub": "Milnes City"
+  },
+  {
+    "name": "Cerulean Harbor",
+    "parent": "Irethian Tidelands",
+    "span": "10 - 20",
+    "qDungeon": "Scoundrels' Gully",
+    "hub": "Tide's Crest"
+  },
+  {
+    "name": "Mammoth Headlands",
+    "parent": "Mur'akhrem",
+    "span": "10 - 20",
+    "qDungeon": "Golem Burial Shrine",
+    "hub": "Eastharbor"
+  },
+  {
+    "name": "Verdant Reef",
+    "parent": "Augur Isles",
+    "span": "10 - 20",
+    "qDungeon": "Coral Tunnels",
+    "hub": "Tei Ko's Retreat"
+  },
+  {
+    "name": "Ashfalle Tundra",
+    "parent": "Mikota Massif",
+    "span": "13 - 28",
+    "qDungeon": "",
+    "hub": "Mikota Valley Camp"
+  },
+  {
+    "name": "Kratur",
+    "parent": "Mur'akhrem",
+    "span": "20 - 30",
+    "qDungeon": "Deepdark Crevasse",
+    "hub": "Kratur Village"
+  },
+  {
+    "name": "Stormbreach",
+    "parent": "Irethian Tidelands",
+    "span": "20 - 30",
+    "qDungeon": "The Conduit",
+    "hub": "Vitaeus Sanctum"
+  },
+  {
+    "name": "Strait of Milnes",
+    "parent": "Augur Isles",
+    "span": "20 - 30",
+    "qDungeon": "Milnes Cistern",
+    "hub": "Calah'r"
+  }
+]

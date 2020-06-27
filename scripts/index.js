@@ -1,9 +1,6 @@
 import project, { legalHTML } from "./westseii.temp.js";
 
 import { $ } from "./qol/binds.js";
-// import domNodeString from "./qol/dom.node.string.js";
-import loadPlaintext from "./qol/load.plaintext.js";
-// import randomIntInclusive from "./qol/random.int.inclusive.js";
 
 import newTestCard, { _testCardArr } from "./modules/test.card.js";
 import newTestNotif, { _testNotifArr } from "./modules/test.notif.js";
@@ -65,90 +62,33 @@ function toggleContrast() {
 $(".display-date").innerHTML = project.date;
 
 //
-/* ajax1 - load plaintext */
+/* temp */
 
-const testTargetElement1ClassName = ".ajax1-inner";
-const testURL1 = "../test/text.txt";
-
-const btnAjax1 = $(".btn-ajax1");
-btnAjax1.addEventListener("click", () =>
-  loadPlaintext($(".ajax1-inner"), testURL1)
-);
-
-//
-/* ajax1 - clear plaintext */
-
-const btnAjax1Clear = $(".btn-ajax1-clear");
-btnAjax1Clear.addEventListener(
-  "click",
-  () => ($(testTargetElement1ClassName).innerHTML = "")
-);
-
-//
-/* ajax2 - load JSON - todo */
-
-function loadTodo(url) {
-  const xhr = new XMLHttpRequest();
-
-  xhr.open("GET", url, true);
-  xhr.onload = function () {
-    switch (this.status) {
-      case 200:
-        const todo = JSON.parse(this.responseText);
-        $(".ajax2-todo").innerHTML = `
-        <p>${todo.name}</p>
-        <p>${todo.desc}</p>
-        `;
-        break;
-      case 404:
-        $(".ajax2-todo").innerHTML = "<p>404</p>";
-        break;
-    }
-  };
-
-  xhr.send();
+function getZones(path) {
+  fetch(path)
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach(function (zone) {
+        mainContent.insertAdjacentHTML(
+          "beforeend",
+          `
+          <div class="test-card">
+            <h2>${zone.name}</h2>
+            <p class="para">Region: ${zone.parent}</p>
+            <p class="para">Span: ${zone.span}</p>
+            <p class="para">Dungeon: ${zone.qDungeon}</p>
+            <p class="para">Main hub: ${zone.hub}</p>
+          </div>
+          `
+        );
+      });
+    });
 }
 
-const btnAjax2todo = $(".btn-ajax2-todo");
-btnAjax2todo.addEventListener("click", () => {
-  loadTodo("../test/todo.json");
-});
+getZones("../test/zones.json");
 
-//
-/* ajax2 - load JSON - todos */
-
-function loadTodos(url) {
-  const xhr = new XMLHttpRequest();
-
-  xhr.open("GET", url, true);
-  xhr.onload = function () {
-    switch (this.status) {
-      case 200:
-        const todoList = JSON.parse(this.responseText);
-        let HTML = "";
-        for (const todo of todoList) {
-          HTML += `
-          <p>${todo.name}</p>
-          <p>${todo.desc}</p>
-          `;
-        }
-        $(".ajax2-todos").innerHTML = HTML;
-        break;
-      case 404:
-        $(".ajax2-todos").innerHTML = "<p>404</p>";
-        break;
-    }
-  };
-
-  xhr.send();
-}
-
-const btnAjax2todos = $(".btn-ajax2-todos");
-btnAjax2todos.addEventListener("click", () => {
-  loadTodos("../test/todos.json");
-});
-
-//
-//
-
-newTestNotif(mainNotify, "notification", "notification");
+newTestNotif(
+  mainNotify,
+  "Notification",
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+);
