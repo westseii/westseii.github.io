@@ -1,6 +1,7 @@
 import project, { legalHTML } from "./westseii.temp.js";
 
 import { $ } from "./qol/binds.js";
+import domNodeString from "./qol/dom.node.string.js";
 
 import newTestCard, { _testCardArr } from "./modules/test.card.js";
 import newTestNotif, { _testNotifArr } from "./modules/test.notif.js";
@@ -15,7 +16,7 @@ const headerTitle = $(".header__title");
 const headerGreetUser = $(".header__greet-user");
 const mainNav = $(".main__nav");
 const mainContent = $(".main__content");
-const mainNotify = $(".main__notif");
+const mainNotif = $(".main__notif");
 const footer = $(".footer");
 const footerLegal = $(".legal");
 
@@ -48,7 +49,7 @@ const toggleContrastArr = [
   { element: header, class: "bg-tc1" },
   { element: mainNav, class: "bg-tc2" },
   { element: mainContent, class: "bg-tc3" },
-  { element: mainNotify, class: "bg-tc4" },
+  { element: mainNotif, class: "bg-tc4" },
   { element: footer, class: "bg-tc1" },
 ];
 
@@ -64,31 +65,14 @@ $(".display-date").innerHTML = project.date;
 //
 /* temp */
 
-function getZones(path) {
-  fetch(path)
-    .then((res) => res.json())
-    .then((data) => {
-      data.forEach(function (zone) {
-        mainContent.insertAdjacentHTML(
-          "beforeend",
-          `
-          <div class="test-card">
-            <h2>${zone.name}</h2>
-            <p class="para">Region: ${zone.parent}</p>
-            <p class="para">Span: ${zone.span}</p>
-            <p class="para">Dungeon: ${zone.qDungeon}</p>
-            <p class="para">Main hub: ${zone.hub}</p>
-          </div>
-          `
-        );
-      });
-    });
-}
+newTestCard(mainContent, "Test", "Test", "Test", "Test", "Test", "Test");
 
-getZones("../test/zones.json");
+const testNotifCount = 5;
 
-newTestNotif(
-  mainNotify,
-  "Notification",
-  "Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-);
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => response.json())
+  .then((json) => {
+    for (let i = 0; i < testNotifCount; i++) {
+      newTestNotif(mainNotif, json[i].completed, json[i].title);
+    }
+  });
