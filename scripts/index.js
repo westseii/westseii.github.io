@@ -65,7 +65,14 @@ $(".display-date").innerHTML = project.date;
 //
 /* temp */
 
-newTestCard(mainContent, "Test", "Test", "Test", "Test", "Test", "Test");
+newTestCard(
+  mainContent,
+  "Oh hi!",
+  "This was more of a micro-project I did to refresh myself on a couple of JavaScript fundamentals before starting a Vue.js project.",
+  "The only truly interactive thing here is the 'Show toybox' button on the left. All it contains is a single option to toggle background colors for body elements.",
+  "~Scott"
+);
+newTestCard(mainContent, "Test", "Test", "Test", "Test");
 
 const testNotifCount = 5;
 

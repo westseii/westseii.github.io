@@ -1,3 +1,6 @@
+//
+/* outdated, use fetch instead */
+
 function loadPlaintext(targetElement, url) {
   const xhr = new XMLHttpRequest();
 
